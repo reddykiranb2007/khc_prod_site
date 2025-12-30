@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — KHC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .section {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem
+    }
+
+    .headline {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0B3C68
+    }
+
+    .subtext {
+      color: #4b5563;
+      line-height: 1.7
+    }
+
+    .btn-primary {
+      padding: .75rem 1.5rem;
+      border-radius: 1rem;
+      background: #008ED6;
+      color: white;
+      transition: .15s
+    }
+
+    .btn-primary:hover {
+      background: #0B3C68
+    }
+
+    .btn-outline {
+      padding: .75rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid #0B3C68;
+      color: #0B3C68
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 1rem;
+      border: 1px solid #008ED6;
+      background: white;
+      color: #0B3C68;
+      transition: .2s
+    }
+
+    .btn-download:hover {
+      background: #E6F4FF
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      background: white;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06)
+    }
+
+    .logo-gray {
+      filter: grayscale(1);
+      opacity: .85;
+      transition: .25s
+    }
+
+    .logo-gray:hover {
+      filter: none;
+      opacity: 1
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom right, rgba(0, 26, 58, .55), rgba(0, 142, 214, .25))
+    }
+  </style>
+</head>
+
+<body class="bg-white text-[#1B2430]">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+        <span class="text-lg font-medium">
+          <span class="text-[#0B3C68] font-bold">KYRON</span>
+          <span class="text-[#008ED6]"> Healthcare</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html" class="text-[#0B3C68]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1 class="headline">Contact Us</h1>
+    <p class="subtext mt-3 max-w-2xl">
+      Have questions about our products or want to learn more? Get in touch with our team.
+    </p>
+
+    <form class="mt-8 grid md:grid-cols-2 gap-6">
+
+      <input class="border rounded-xl p-3" placeholder="Full Name">
+      <input class="border rounded-xl p-3" placeholder="Email">
+
+      <input class="border rounded-xl p-3" placeholder="Phone">
+      <input class="border rounded-xl p-3" placeholder="Organization">
+
+      <textarea class="border rounded-xl p-3 md:col-span-2" rows="5" placeholder="Tell us how we can help"></textarea>
+
+      <button class="btn-primary md:col-span-2 w-fit">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B3C68] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      © 2025 Kyron Healthcare Private Limited
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHC — Redefining Neonatal Respiratory Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .section {
+      @apply max-w-7xl mx-auto px-6 py-16;
+    }
+
+    .headline {
+      @apply text-3xl md:text-4xl font-bold text-[#0B3C68];
+    }
+
+    .subtext {
+      @apply text-gray-600 leading-relaxed;
+    }
+
+    .btn-primary {
+      @apply px-6 py-3 rounded-xl bg-[#008ED6] text-white shadow hover:bg-[#0B3C68] transition;
+    }
+
+    .btn-outline {
+      @apply px-6 py-3 rounded-xl border text-[#0B3C68] hover:bg-[#E6F4FF];
+    }
+
+    .card {
+      @apply p-6 rounded-2xl bg-white shadow hover:shadow-lg transition;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom right,
+          rgba(0, 26, 58, 0.55),
+          rgba(0, 142, 214, 0.25));
+    }
+  </style>
+
+  <style>
+    .logo-gray {
+      filter: grayscale(100%);
+      opacity: .8;
+      transition: .3s;
+    }
+
+    .logo-gray:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .slider-track {
+      animation: scroll 25s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-[#1B2430]">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+        <span class="text-lg font-medium">
+          <span class="text-[#0B3C68] font-bold">KYRON</span>
+          <span class="text-[#008ED6]"> Healthcare</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html" class="text-[#0B3C68]">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-[#E6F4FF]">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68]">
+          Redefining Neonatal Respiratory Care
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Precision-engineered devices designed for safety, performance, and
+          clinical confidence in NICU environments.
+        </p>
+
+        <div class="mt-6">
+          <a href="products.html" class="px-6 py-3 bg-[#008ED6] text-white rounded-xl shadow hover:bg-[#0B3C68]">
+            Explore Devices
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <img src="assets/img/hero.jpg" alt="NICU technology" class="rounded-2xl shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY KHC -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-[#0B3C68] mb-6">
+        Why Kyron Healthcare
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
+          <h3 class="font-semibold text-lg mb-2">Clinical Reliability</h3>
+          <p class="text-gray-600">
+            Designed to support real-world NICU workflows with dependable performance.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
+          <h3 class="font-semibold text-lg mb-2">Patient-Centered</h3>
+          <p class="text-gray-600">
+            Gentle respiratory support focused on comfort and safety.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
+          <h3 class="font-semibold text-lg mb-2">Innovation-Driven</h3>
+          <p class="text-gray-600">
+            Technology developed through engineering expertise and clinical insight.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO SLIDER — ABOVE TESTIMONIALS -->
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-2xl font-bold text-[#0B3C68] mb-6">
+        Trusted by leading hospitals and care centers
+      </h3>
+
+      <div class="overflow-hidden relative">
+        <div class="flex gap-12 slider-track">
+          <!-- duplicate set for infinite scroll -->
+          <img src="assets/img/logo1.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo2.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo3.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo4.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo5.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo6.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo7.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo8.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo9.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo10.png" class="h-14 logo-gray" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-16 bg-[#F2F3F5]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-[#0B3C68] mb-6">
+        What clinicians say
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow">
+          “Consistent performance with intuitive controls — ideal for NICU teams.”
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          “Reliable support and thoughtful engineering behind every device.”
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          “Simple to operate, yet clinically capable.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B3C68] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-semibold mb-3">Kyron Healthcare</h4>
+        <p class="text-gray-200 text-sm">
+          Dedicated to advancing neonatal respiratory care with engineering precision.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-sm">© 2025 Kyron Healthcare Private Limited</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Research — Kyron Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .section {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .headline {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0B3C68;
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 2.5rem;
+            }
+        }
+
+        .subtext {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            background: #008ED6;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #0B3C68;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <header class="border-b bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+                <span class="text-lg font-medium">
+                    <span class="text-[#0B3C68] font-bold">KYRON</span>
+                    <span class="text-[#008ED6]"> Healthcare</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex gap-6 font-medium">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="research.html" class="text-[#0B3C68]">Research</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-br from-[#E6F4FF] to-[#F7F9FC] py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="headline">Research & Innovation</h1>
+            <p class="subtext mt-4 max-w-3xl">
+                Our development philosophy centers on safety, reliability, and continuous learning from clinical
+                practice.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="text-2xl font-bold text-[#0B3C68] mb-6">Focus Areas</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card">
+                <h3 class="font-semibold mb-2 text-[#0B3C68]">Neonatal respiratory care</h3>
+                <p class="subtext text-sm">
+                    Focused research into comfort, humidification, and non-invasive support strategies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="font-semibold mb-2 text-[#0B3C68]">Usability & workflow</h3>
+                <p class="subtext text-sm">
+                    Designs shaped by clinician feedback to reduce complexity at the bedside.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

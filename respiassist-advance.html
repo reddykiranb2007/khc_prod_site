@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RespiAssist Advance — KHC</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .section {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .headline {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0B3C68;
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 2.5rem;
+            }
+        }
+
+        .subtext {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            background: #008ED6;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #0B3C68;
+        }
+
+        .btn-outline {
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #0B3C68;
+            color: #0B3C68;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: #E6F4FF;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.75rem 1.25rem;
+            background: #008ED6;
+            color: white;
+            border-radius: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 142, 214, 0.3);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            z-index: 40;
+        }
+
+        .back-to-products:hover {
+            background: #0B3C68;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 142, 214, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-[#1B2430]">
+
+    <header class="border-b bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+                <span class="text-lg font-medium">
+                    <span class="text-[#0B3C68] font-bold">KYRON</span>
+                    <span class="text-[#008ED6]"> Healthcare</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex gap-6">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="research.html">Research</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION - START                         -->
+    <!-- ============================================ -->
+    <section class="bg-[#F2F3F5]">
+        <div class="section grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
+                <h1 class="headline">RespiAssist Advance</h1>
+                <p class="subtext mt-3">
+                    Advanced NIV platform with enhanced monitoring, precision, and therapy modes.
+                </p>
+            </div>
+
+            <img src="assets/img/respiassist-hero.png" class="rounded-2xl shadow" alt="RespiAssist Advance NIV System">
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION - END                           -->
+    <!-- ============================================ -->
+
+    <section id="features" class="py-14 max-w-7xl mx-auto px-6 space-y-10">
+        <div>
+            <h2 class="text-2xl font-bold mb-2 text-[#0B3C68]">
+                Key Features
+            </h2>
+            <ul class="text-gray-600 space-y-2">
+                <li>• Larger interactive display</li>
+                <li>• Advanced therapy modes</li>
+                <li>• Real-time flow, pressure & FiO₂ monitoring</li>
+                <li>• Designed for complex NICU scenarios</li>
+            </ul>
+
+            <h3 class="mt-10 text-xl font-bold text-[#0B3C68]">
+                Technical Specifications
+            </h3>
+
+            <div class="overflow-x-auto mt-3">
+                <table class="w-full text-sm border rounded-xl">
+                    <tbody class="divide-y">
+
+                        <tr>
+                            <td class="p-3 font-medium">Display</td>
+                            <td class="p-3">8-inch touch + rotating knob</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-3 font-medium">Therapy Modes</td>
+                            <td class="p-3">
+                                nCPAP, Bubble CPAP, HFNC/O₂
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-3 font-medium">FiO₂ Range</td>
+                            <td class="p-3">21 – 100 %</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-3 font-medium">Flow Range</td>
+                            <td class="p-3">4 – 60 LPM</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-3 font-medium">Monitoring</td>
+                            <td class="p-3">
+                                Flow, Pressure, FiO₂ (real-time)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-3 font-medium">Battery Backup</td>
+                            <td class="p-3">Up to 4 hours</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="assets/brochures/respiassist-advance.pdf" download class="btn-primary mt-8 inline-block">
+                View Brochure (PDF)
+            </a>
+        </div>
+    </section>
+
+    <!-- Back to Products Button -->
+    <a href="products.html" class="back-to-products">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Back to Products
+    </a>
+
+    <footer class="bg-[#0B3C68] text-white py-8 mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            © 2025 Kyron Healthcare Private Limited
+        </div>
+    </footer>
+
+</body>
+
+</html>

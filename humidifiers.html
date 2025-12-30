@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Humidifier Series — KHC</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .section {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .headline {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0B3C68;
+    }
+
+    @media (min-width: 768px) {
+      .headline {
+        font-size: 2.5rem;
+      }
+    }
+
+    .subtext {
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      background: #008ED6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #0B3C68;
+    }
+
+    .btn-outline {
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid #0B3C68;
+      color: #0B3C68;
+    }
+
+    .btn-outline:hover {
+      background: #E6F4FF;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom right,
+          rgba(0, 26, 58, 0.55),
+          rgba(0, 142, 214, 0.25));
+    }
+
+    .back-to-products {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0.75rem 1.25rem;
+      background: #008ED6;
+      color: white;
+      border-radius: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 142, 214, 0.3);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      z-index: 40;
+    }
+
+    .back-to-products:hover {
+      background: #0B3C68;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 142, 214, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-[#1B2430]">
+  <header class="border-b bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+      <a class="flex items-center gap-3" href="index.html">
+        <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+        <span class="text-lg font-medium">
+          <span class="text-[#0B3C68] font-bold">KYRON</span>
+          <span class="text-[#008ED6]"> Healthcare</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <img src="assets/img/humidifier-hero.png" class="w-full max-h-[520px] object-cover" alt="KHC Humidifier Series">
+    <div class="absolute inset-0 hero-overlay flex items-center">
+      <div class="section !py-10">
+        <h1 class="headline text-white">KHC Humidifier Series</h1>
+        <p class="text-white/90 mt-3 max-w-2xl">
+          Precise, consistent humidification supporting safer neonatal and pediatric respiratory care.
+        </p>
+
+        <div class="mt-6 flex gap-4">
+          <a href="#khc1000" class="btn-primary">View KHC 1000</a>
+          <a href="#khc3000" class="btn-outline text-white border-white">View KHC 3000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section space-y-12">
+
+    <div>
+      <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">
+        Why humidification matters
+      </h2>
+      <p class="subtext">
+        Delivering warmed and humidified gases helps protect delicate airways,
+        improves comfort, and supports effective therapy — especially for neonates.
+      </p>
+    </div>
+
+    <!-- KHC 1000 -->
+    <div id="khc1000" class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="assets/img/khc1000.png" class="rounded-2xl shadow" alt="KHC 1000 Respiratory Humidifier">
+
+      <div>
+        <h3 class="text-xl font-bold text-[#0B3C68] mb-3">KHC 1000 — Respiratory Humidifier</h3>
+
+        <ul class="space-y-2 subtext">
+          <li>• Full servo-controlled heating</li>
+          <li>• Multiple therapy modes</li>
+          <li>• Bright 7-segment temperature display</li>
+          <li>• Accurate temperature control</li>
+        </ul>
+
+        <h4 class="mt-5 font-semibold">Key Specifications</h4>
+        <ul class="text-gray-600 text-sm mt-2 space-y-1">
+          <li>— Heater plate capacity: 150W (max 115°C)</li>
+          <li>— Temperature range: 5 to 70°C (±0.3°C within 25–45°C)</li>
+          <li>— Recommended ambient: 18–26°C</li>
+        </ul>
+
+        <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
+
+        <div class="overflow-x-auto mt-3">
+          <table class="w-full text-sm border rounded-xl">
+            <tbody class="divide-y">
+
+              <tr>
+                <td class="p-3 font-medium">Dimensions</td>
+                <td class="p-3">W135 × D170 × H156 mm</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Weight</td>
+                <td class="p-3">2.9 kg (without chamber)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Supply Voltage</td>
+                <td class="p-3">220 V, 50/60 Hz</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Current</td>
+                <td class="p-3">3 A (max)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Heater Plate Capacity</td>
+                <td class="p-3">150 W — up to 115 °C</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Temperature Range</td>
+                <td class="p-3">5 – 70 °C (±0.3 °C from 25 – 45 °C)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Flow Range</td>
+                <td class="p-3">
+                  Invasive: up to 40 L/min<br>
+                  Non-invasive: up to 60 L/min
+                </td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Warm-up Time</td>
+                <td class="p-3">Less than 30 minutes</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Standards</td>
+                <td class="p-3">
+                  IEC 60601-1, IEC 60601-1-2, ISO 8185
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <a href="assets/brochures/khc1000.pdf" download class="btn-primary mt-6 inline-block">
+          View KHC 1000 Brochure
+        </a>
+      </div>
+    </div>
+
+    <!-- KHC 3000 -->
+    <div id="khc3000" class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="assets/img/khc3000.png" class="rounded-2xl shadow" alt="KHC 3000 Advanced Humidifier">
+
+      <div>
+        <h3 class="text-xl font-bold text-[#0B3C68] mb-3">KHC 3000 — Advanced Humidifier</h3>
+
+        <ul class="space-y-2 subtext">
+          <li>• Enhanced monitoring and control</li>
+          <li>• Designed for intensive care workflows</li>
+          <li>• High-accuracy feedback control</li>
+          <li>• Advanced digital display interface</li>
+        </ul>
+
+        <h4 class="mt-5 font-semibold">Key Specifications</h4>
+        <ul class="text-gray-600 text-sm mt-2 space-y-1">
+          <li>— Heater plate capacity: 200W (max 120°C)</li>
+          <li>— Temperature range: 5 to 75°C (±0.2°C within 25–50°C)</li>
+          <li>— Recommended ambient: 18–28°C</li>
+        </ul>
+
+        <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
+
+        <div class="overflow-x-auto mt-3">
+          <table class="w-full text-sm border rounded-xl">
+            <tbody class="divide-y">
+
+              <tr>
+                <td class="p-3 font-medium">Dimensions</td>
+                <td class="p-3">W145 × D180 × H165 mm</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Weight</td>
+                <td class="p-3">3.2 kg (without chamber)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Supply Voltage</td>
+                <td class="p-3">220 V, 50/60 Hz</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Current</td>
+                <td class="p-3">3.5 A (max)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Heater Plate Capacity</td>
+                <td class="p-3">200 W — up to 120 °C</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Temperature Range</td>
+                <td class="p-3">5 – 75 °C (±0.2 °C from 25 – 50 °C)</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Flow Range</td>
+                <td class="p-3">
+                  Invasive: up to 50 L/min<br>
+                  Non-invasive: up to 70 L/min
+                </td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Warm-up Time</td>
+                <td class="p-3">Less than 25 minutes</td>
+              </tr>
+
+              <tr>
+                <td class="p-3 font-medium">Standards</td>
+                <td class="p-3">
+                  IEC 60601-1, IEC 60601-1-2, ISO 8185
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <a href="assets/brochures/khc3000.pdf" download class="btn-primary mt-6 inline-block">
+          View KHC 3000 Brochure
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Back to Products Button -->
+  <a href="products.html" class="back-to-products">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7" />
+    </svg>
+    Back to Products
+  </a>
+
+  <footer class="bg-[#0B3C68] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      © 2025 Kyron Healthcare Private Limited
+    </div>
+  </footer>
+
+</body>
+
+</html>

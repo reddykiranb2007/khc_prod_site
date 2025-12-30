@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Kyron Healthcare</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Note: These utility classes are defined but not currently used in this page */
+    .section {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .headline {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0B3C68;
+    }
+
+    @media (min-width: 768px) {
+      .headline {
+        font-size: 2.5rem;
+      }
+    }
+
+    .subtext {
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      background: #008ED6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #0B3C68;
+    }
+
+    .btn-outline {
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid #0B3C68;
+      color: #0B3C68;
+    }
+
+    .btn-outline:hover {
+      background: #E6F4FF;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom right,
+          rgba(0, 26, 58, 0.55),
+          rgba(0, 142, 214, 0.25));
+    }
+  </style>
+
+</head>
+
+<body class="bg-white text-[#1B2430]">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+        <span class="text-lg font-medium">
+          <span class="text-[#0B3C68] font-bold">KYRON</span>
+          <span class="text-[#008ED6]"> Healthcare</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="text-[#0B3C68]">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-[#E6F4FF] py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-[#0B3C68]">About Kyron Healthcare</h1>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        We exist to support the most fragile lives — with technology designed
+        for precision, safety, and clinical confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold text-[#0B3C68] mb-4">Our Mission</h2>
+        <p class="text-gray-600 leading-relaxed">
+          To deliver reliable, affordable, and clinically capable respiratory
+          solutions for neonatal and pediatric care — empowering clinicians
+          with technology they can trust.
+        </p>
+      </div>
+
+      <div class="bg-[#F7F9FC] p-6 rounded-2xl shadow">
+        <h3 class="font-semibold mb-2">What drives us</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>✔ Patient-first engineering</li>
+          <li>✔ Continuous quality improvement</li>
+          <li>✔ Collaboration with clinicians</li>
+          <li>✔ Safety as the highest priority</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="py-12 bg-[#F2F3F5]">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <h4 class="font-semibold text-[#0B3C68] mb-2">Clinical Partnership</h4>
+        <p class="text-gray-600 text-sm">
+          Designed with continuous feedback from NICU environments.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <h4 class="font-semibold text-[#0B3C68] mb-2">Quality by Design</h4>
+        <p class="text-gray-600 text-sm">
+          Built to meet stringent medical safety and performance expectations.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <h4 class="font-semibold text-[#0B3C68] mb-2">Innovation with Purpose</h4>
+        <p class="text-gray-600 text-sm">
+          Every feature is designed to make care safer and simpler.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B3C68] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      © 2025 Kyron Healthcare Private Limited
+    </div>
+  </footer>
+
+</body>
+
+</html>

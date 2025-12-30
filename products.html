@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Kyron Healthcare</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .section {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .headline {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0B3C68;
+    }
+
+    @media (min-width: 768px) {
+      .headline {
+        font-size: 2.5rem;
+      }
+    }
+
+    .subtext {
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      background: #008ED6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #0B3C68;
+    }
+  </style>
+
+</head>
+
+<body class="bg-white text-[#1B2430]">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
+        <span class="text-lg font-medium">
+          <span class="text-[#0B3C68] font-bold">KYRON</span>
+          <span class="text-[#008ED6]"> Healthcare</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="text-[#0B3C68]">Products</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-[#E6F4FF] py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-[#0B3C68]">Our Products</h1>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        Reliable respiratory support solutions developed for NICU and pediatric care.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+
+      <!-- RespiAssist -->
+      <a href="respiassist.html" class="p-6 rounded-2xl bg-[#F7F9FC] shadow block hover:shadow-lg transition">
+        <img src="assets/img/respiassist-hero.png" alt="RespiAssist" class="w-full h-48 object-cover rounded-xl mb-4">
+        <h3 class="font-bold text-xl text-[#0B3C68] mb-2">RespiAssist</h3>
+        <p class="text-gray-600 text-sm">
+          Non-invasive ventilation designed for neonatal and pediatric support.
+        </p>
+      </a>
+
+      <!-- RespiAssist Advance -->
+      <a href="respiassist-advance.html" class="p-6 rounded-2xl bg-[#F7F9FC] shadow block hover:shadow-lg transition">
+        <img src="assets/img/respiassist-hero.png" alt="RespiAssist Advance"
+          class="w-full h-48 object-cover rounded-xl mb-4">
+        <h3 class="font-bold text-xl text-[#0B3C68] mb-2">RespiAssist Advance</h3>
+        <p class="text-gray-600 text-sm">
+          Enhanced NIV platform offering greater precision and monitoring.
+        </p>
+      </a>
+
+      <!-- Humidifiers -->
+      <a href="humidifiers.html" class="p-6 rounded-2xl bg-[#F7F9FC] shadow block hover:shadow-lg transition">
+        <img src="assets/img/humidifier-hero.png" alt="Humidifier Series"
+          class="w-full h-48 object-cover rounded-xl mb-4">
+        <h3 class="font-bold text-xl text-[#0B3C68] mb-2">Humidifier Series</h3>
+        <p class="text-gray-600 text-sm">
+          KHC 1000 and KHC 3000 humidifiers for safe respiratory humidification.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B3C68] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      © 2025 Kyron Healthcare Private Limited
+    </div>
+  </footer>
+
+</body>
+
+</html>
