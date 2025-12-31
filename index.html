@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KHC — Redefining Neonatal Respiratory Care</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
   <style>
     .section {
       @apply max-w-7xl mx-auto px-6 py-16;
@@ -20,7 +29,19 @@
     }
 
     .btn-primary {
-      @apply px-6 py-3 rounded-xl bg-[#008ED6] text-white shadow hover:bg-[#0B3C68] transition;
+      @apply px-6 py-3 rounded-xl bg-[#008ED6] text-white shadow transition-all duration-300;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      @apply bg-[#0B3C68];
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 142, 214, 0.3);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
     }
 
     .btn-outline {
@@ -28,13 +49,42 @@
     }
 
     .card {
-      @apply p-6 rounded-2xl bg-white shadow hover:shadow-lg transition;
+      @apply p-6 rounded-2xl bg-white shadow transition-all duration-400;
+    }
+
+    .card:hover {
+      @apply shadow-2xl;
+      transform: translateY(-8px) scale(1.02);
     }
 
     .hero-overlay {
       background: linear-gradient(to bottom right,
           rgba(0, 26, 58, 0.55),
           rgba(0, 142, 214, 0.25));
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0B3C68;
+    }
+
+    .mobile-menu.active {
+      right: 0;
     }
   </style>
 
@@ -69,7 +119,7 @@
 <body class="bg-white text-[#1B2430]">
 
   <!-- HEADER -->
-  <header class="border-b bg-white sticky top-0 z-50">
+  <header class="glass-nav sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
@@ -85,6 +135,24 @@
         <a href="products.html">Products</a>
         <a href="research.html">Research</a>
         <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden z-[100] relative w-10 h-10 flex flex-col justify-center gap-1.5 p-2">
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+      </button>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html" class="hover:text-[#008ED6]">Home</a>
+        <a href="about.html" class="hover:text-[#008ED6]">About Us</a>
+        <a href="products.html" class="hover:text-[#008ED6]">Products</a>
+        <a href="research.html" class="hover:text-[#008ED6]">Research</a>
+        <a href="contact.html" class="hover:text-[#008ED6]">Contact</a>
+      </div>
       </nav>
     </div>
   </header>
@@ -92,7 +160,7 @@
   <!-- HERO -->
   <section class="bg-[#E6F4FF]">
     <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div>
+      <div data-aos="fade-right">
         <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68]">
           Redefining Neonatal Respiratory Care
         </h1>
@@ -108,39 +176,67 @@
         </div>
       </div>
 
-      <div>
-        <img src="assets/img/hero.jpg" alt="NICU technology" class="rounded-2xl shadow">
+      <div data-aos="fade-left" data-aos-delay="200" class="relative">
+        <div class="absolute -inset-4 bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+        <img src="assets/img/hero.jpg" alt="NICU technology" class="relative rounded-2xl shadow-2xl animate-float"
+          loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- WHY KHC -->
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-gradient-to-b from-[#E6F4FF] via-white to-[#F2F3F5]">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-[#0B3C68] mb-6">
         Why Kyron Healthcare
       </h2>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
-          <h3 class="font-semibold text-lg mb-2">Clinical Reliability</h3>
+        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
+          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Clinical Reliability</h3>
           <p class="text-gray-600">
             Designed to support real-world NICU workflows with dependable performance.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
-          <h3 class="font-semibold text-lg mb-2">Patient-Centered</h3>
+        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Patient-Centered</h3>
           <p class="text-gray-600">
             Gentle respiratory support focused on comfort and safety.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[#F7F9FC] shadow">
-          <h3 class="font-semibold text-lg mb-2">Innovation-Driven</h3>
+        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Innovation-Driven</h3>
           <p class="text-gray-600">
             Technology developed through engineering expertise and clinical insight.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS COUNTER -->
+  <section class="py-16 bg-gradient-to-r from-[#0B3C68] to-[#008ED6] text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div data-aos="zoom-in">
+          <div class="text-5xl font-bold mb-2">
+            <span class="stat-number" data-count="500">0</span>+
+          </div>
+          <p class="text-lg opacity-90">Hospitals Served</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-5xl font-bold mb-2">
+            <span class="stat-number" data-count="10000">0</span>+
+          </div>
+          <p class="text-lg opacity-90">Lives Improved</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200">
+          <div class="text-5xl font-bold mb-2">
+            <span class="stat-number" data-count="15">0</span>+
+          </div>
+          <p class="text-lg opacity-90">Years of Innovation</p>
         </div>
       </div>
     </div>
@@ -209,5 +305,76 @@
   </footer>
 
 </body>
+
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 50,
+    easing: 'ease-out-cubic'
+  });
+
+  // Mobile Menu Logic
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const spans = menuToggle.querySelectorAll('span');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+
+    // Hamburger animation
+    if (mobileMenu.classList.contains('active')) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      document.body.style.overflow = 'hidden';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Animated Counter Logic
+  const counters = document.querySelectorAll('.stat-number');
+  const speed = 200;
+
+  const runCounter = (counter) => {
+    const target = +counter.getAttribute('data-count');
+    const increment = target / speed;
+
+    const updateCount = () => {
+      const count = +counter.innerText;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+
+    updateCount();
+  };
+
+  // Trigger counter when visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target.querySelector('.stat-number');
+        if (counter && counter.innerText === '0') {
+          runCounter(counter);
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-aos="zoom-in"]').forEach(el => {
+    if (el.querySelector('.stat-number')) {
+      observer.observe(el);
+    }
+  });
+</script>
 
 </html>

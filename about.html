@@ -7,6 +7,11 @@
   <title>About — Kyron Healthcare</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
   <style>
     /* Note: These utility classes are defined but not currently used in this page */
     .section {
@@ -73,6 +78,30 @@
           rgba(0, 26, 58, 0.55),
           rgba(0, 142, 214, 0.25));
     }
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0B3C68;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
   </style>
 
 </head>
@@ -80,7 +109,7 @@
 <body class="bg-white text-[#1B2430]">
 
   <!-- HEADER -->
-  <header class="border-b bg-white sticky top-0 z-50">
+  <header class="glass-nav border-b sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
@@ -96,13 +125,31 @@
         <a href="products.html">Products</a>
         <a href="research.html">Research</a>
         <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden z-[100] relative w-10 h-10 flex flex-col justify-center gap-1.5 p-2">
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+        <span class="w-full h-0.5 bg-[#0B3C68] transition-all"></span>
+      </button>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html" class="hover:text-[#008ED6]">Home</a>
+        <a href="about.html" class="hover:text-[#008ED6]">About Us</a>
+        <a href="products.html" class="hover:text-[#008ED6]">Products</a>
+        <a href="research.html" class="hover:text-[#008ED6]">Research</a>
+        <a href="contact.html" class="hover:text-[#008ED6]">Contact</a>
+      </div>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="bg-[#E6F4FF] py-16">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6" data-aos="fade-down">
       <h1 class="text-4xl font-bold text-[#0B3C68]">About Kyron Healthcare</h1>
       <p class="mt-4 text-gray-600 max-w-3xl">
         We exist to support the most fragile lives — with technology designed
@@ -114,7 +161,7 @@
   <!-- STORY -->
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-      <div>
+      <div data-aos="fade-right">
         <h2 class="text-2xl font-bold text-[#0B3C68] mb-4">Our Mission</h2>
         <p class="text-gray-600 leading-relaxed">
           To deliver reliable, affordable, and clinically capable respiratory
@@ -123,7 +170,7 @@
         </p>
       </div>
 
-      <div class="bg-[#F7F9FC] p-6 rounded-2xl shadow">
+      <div class="bg-[#F7F9FC] p-6 rounded-2xl shadow" data-aos="fade-left">
         <h3 class="font-semibold mb-2">What drives us</h3>
         <ul class="space-y-2 text-gray-600">
           <li>✔ Patient-first engineering</li>
@@ -169,5 +216,37 @@
   </footer>
 
 </body>
+
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 50,
+    easing: 'ease-out-cubic'
+  });
+
+  // Mobile Menu Logic
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const spans = menuToggle.querySelectorAll('span');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+
+    // Hamburger animation
+    if (mobileMenu.classList.contains('active')) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      document.body.style.overflow = 'hidden';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
 
 </html>
