@@ -160,17 +160,19 @@
       Have questions about our products or want to learn more? Get in touch with our team.
     </p>
 
-    <form class="mt-8 grid md:grid-cols-2 gap-6">
+    <form id="contactForm" class="mt-8 grid md:grid-cols-2 gap-6">
 
-      <input class="border rounded-xl p-3" placeholder="Full Name">
-      <input class="border rounded-xl p-3" placeholder="Email">
+      <input name="name" class="border rounded-xl p-3" placeholder="Full Name" required>
+      <input name="email" type="email" class="border rounded-xl p-3" placeholder="Email" required>
 
-      <input class="border rounded-xl p-3" placeholder="Phone">
-      <input class="border rounded-xl p-3" placeholder="Organization">
+      <input name="mobile" type="tel" class="border rounded-xl p-3" placeholder="Phone (10 digits)" maxlength="10"
+        required>
+      <input name="company" class="border rounded-xl p-3" placeholder="Organization">
 
-      <textarea class="border rounded-xl p-3 md:col-span-2" rows="5" placeholder="Tell us how we can help"></textarea>
+      <textarea name="subject" class="border rounded-xl p-3 md:col-span-2" rows="5"
+        placeholder="Tell us how we can help" required></textarea>
 
-      <button class="btn-primary md:col-span-2 w-fit">
+      <button type="submit" class="btn-primary md:col-span-2 w-fit">
         Submit
       </button>
     </form>
@@ -215,6 +217,51 @@
       document.body.style.overflow = 'auto';
     }
   });
+  const contactForm = document.getElementById('contactForm');
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxoW8fkdZYxKYMPjTtfpvG7C_8AE7jI0NcT5rAOAWecTE-TglNd3YJ6bVhzGn5FNRQ7HQ/exec';
+
+  if (contactForm) {
+    // Input restriction
+    const mobileInput = contactForm.querySelector('input[name="mobile"]');
+    mobileInput.addEventListener('input', function () {
+      this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // Validation
+      if (mobileInput.value.length !== 10) {
+        alert("Please enter a valid 10-digit mobile number.");
+        mobileInput.focus();
+        return;
+      }
+
+      const btn = contactForm.querySelector('button');
+      const originalText = btn.innerText;
+
+      btn.innerText = 'Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData(contactForm);
+      formData.append('source', 'Contact Page');
+      formData.append('timestamp', new Date());
+
+      fetch(SCRIPT_URL, { method: 'POST', body: formData })
+        .then(response => {
+          alert("Message sent successfully! We will get back to you soon.");
+          contactForm.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert("Something went wrong. Please try again later.");
+        })
+        .finally(() => {
+          btn.innerText = originalText;
+          btn.disabled = false;
+        });
+    });
+  }
 </script>
 
 </html>
