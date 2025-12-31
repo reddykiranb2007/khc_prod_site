@@ -157,6 +157,18 @@
   // Define global function
   window.openBrochureModal = function (url) {
     targetUrl = url;
+
+    // Check if previously submitted
+    if (localStorage.getItem('khc_brochure_submitted') === 'true') {
+      const link = document.createElement('a');
+      link.href = targetUrl;
+      link.setAttribute('download', '');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
+    }
+
     modal.style.display = 'flex';
     // Focus first input
     setTimeout(() => document.getElementById('bmName').focus(), 100);
@@ -220,6 +232,9 @@
 
       fetch(SCRIPT_URL, { parent: 200, method: 'POST', body: formData })
         .then(response => {
+          // Mark as submitted locally
+          localStorage.setItem('khc_brochure_submitted', 'true');
+
           // Simulate download regardless of backend response to not block user
           const link = document.createElement('a');
           link.href = targetUrl;
