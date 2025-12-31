@@ -175,9 +175,19 @@
         </div>
       </div>
 
-      <div data-aos="fade-left" data-aos-delay="200" class="relative">
-        <video autoplay loop muted playsinline
-          class="relative rounded-2xl shadow-2xl animate-float w-full h-auto object-cover">
+      <div data-aos="fade-left" data-aos-delay="200"
+        class="relative rounded-2xl shadow-2xl animate-float overflow-hidden group bg-white">
+        <!-- Background Brand Text (Visible when video fades) -->
+        <div class="absolute inset-0 flex items-center justify-center z-10 select-none">
+          <div class="text-3xl md:text-5xl font-medium tracking-tight">
+            <span class="text-[#0B3C68] font-bold">KYRON</span>
+            <span class="text-[#008ED6]"> Healthcare</span>
+          </div>
+        </div>
+
+        <!-- Video (Foreground) -->
+        <video id="hero-video" autoplay muted playsinline
+          class="relative z-20 w-full h-auto object-cover transition-opacity duration-1000">
           <source src="assets/video/home_1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -235,7 +245,7 @@
         </div>
         <div data-aos="zoom-in" data-aos-delay="200">
           <div class="text-5xl font-bold mb-2">
-            <span class="stat-number" data-count="15">0</span>+
+            <span class="stat-number" data-count="6">0</span>+
           </div>
           <p class="text-lg opacity-90">Years of Innovation</p>
         </div>
@@ -253,6 +263,18 @@
       <div class="overflow-hidden relative">
         <div class="flex gap-12 slider-track">
           <!-- duplicate set for infinite scroll -->
+          <img src="assets/img/logo1.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo2.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo3.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo4.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo5.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo6.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo7.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo8.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo9.png" class="h-14 logo-gray" />
+          <img src="assets/img/logo10.png" class="h-14 logo-gray" />
+
+          <!-- Duplicated Set -->
           <img src="assets/img/logo1.png" class="h-14 logo-gray" />
           <img src="assets/img/logo2.png" class="h-14 logo-gray" />
           <img src="assets/img/logo3.png" class="h-14 logo-gray" />
@@ -340,23 +362,30 @@
 
   // Animated Counter Logic
   const counters = document.querySelectorAll('.stat-number');
-  const speed = 200;
+  const duration = 2000; // 2 seconds for all counters
 
   const runCounter = (counter) => {
     const target = +counter.getAttribute('data-count');
-    const increment = target / speed;
+    const startTime = performance.now();
 
-    const updateCount = () => {
-      const count = +counter.innerText;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
+    const updateCount = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Easing function for smooth motion
+      const easeOutQuad = (t) => t * (2 - t);
+
+      const current = Math.floor(easeOutQuad(progress) * target);
+      counter.innerText = current.toLocaleString();
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
       } else {
         counter.innerText = target.toLocaleString();
       }
     };
 
-    updateCount();
+    requestAnimationFrame(updateCount);
   };
 
   // Trigger counter when visible
@@ -376,6 +405,35 @@
       observer.observe(el);
     }
   });
+
+  // Robust Alternating Video Logic (Dip-to-Fade)
+  const videoElement = document.getElementById('hero-video');
+  const sources = [
+    'assets/video/home_1.mp4',
+    'assets/video/home_11.mp4',
+    'assets/video/home_111.mp4'
+  ];
+  let currentIndex = 0;
+
+  if (videoElement) {
+    videoElement.addEventListener('ended', () => {
+      // 1. Fade Out
+      videoElement.style.opacity = '0';
+
+      // 2. Wait for fade (1s) then swap
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % sources.length;
+        videoElement.src = sources[currentIndex];
+
+        // 3. Load & Play
+        videoElement.play().then(() => {
+          // 4. Fade In once playing
+          videoElement.style.opacity = '1';
+        }).catch(e => console.error("Auto-play error:", e));
+
+      }, 1000); // Matches duration-1000 CSS
+    });
+  }
 </script>
 
 </html>
