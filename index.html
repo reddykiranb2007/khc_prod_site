@@ -155,7 +155,6 @@
         <a href="research.html" class="hover:text-[#008ED6]">Research</a>
         <a href="contact.html" class="hover:text-[#008ED6]">Contact</a>
       </div>
-      </nav>
     </div>
   </header>
 
@@ -530,28 +529,9 @@
     easing: 'ease-out-cubic'
   });
 
-  // Mobile Menu Logic
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const spans = menuToggle.querySelectorAll('span');
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-
-    // Hamburger animation
-    if (mobileMenu.classList.contains('active')) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      document.body.style.overflow = 'hidden';
-    } else {
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  });
 </script>
+<script src="assets/js/mobile-menu.js"></script>
 
 <script src="assets/js/counter.js"></script>
 
