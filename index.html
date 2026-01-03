@@ -15,6 +15,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <style>
     .section {
       @apply max-w-7xl mx-auto px-6 py-16;
@@ -113,6 +116,33 @@
         transform: translateX(-50%);
       }
     }
+
+    /* Swiper Custom Styles */
+    .swiper-slide {
+      transition: transform 0.6s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      transition: all 0.6s ease;
+    }
+
+    .swiper-slide-active img {
+      transform: scale(3);
+      filter: none;
+      /* Remove grayscale */
+      opacity: 1;
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Ensure other slides stay gray/small */
+    .swiper-slide:not(.swiper-slide-active) img {
+      /* filter: grayscale(100%);  Already handled by .logo-gray class, but just ensuring consistency if needed */
+      transform: scale(0.8);
+    }
   </style>
 </head>
 
@@ -195,40 +225,9 @@
     </div>
   </section>
 
-  <!-- WHY KHC -->
-  <section class="py-16 bg-gradient-to-b from-[#E6F4FF] via-white to-[#F2F3F5]">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-[#0B3C68] mb-6">
-        Why Kyron Healthcare
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Clinical Reliability</h3>
-          <p class="text-gray-600">
-            Designed to support real-world NICU workflows with dependable performance.
-          </p>
-        </div>
-
-        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Patient-Centered</h3>
-          <p class="text-gray-600">
-            Gentle respiratory support focused on comfort and safety.
-          </p>
-        </div>
-
-        <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="font-semibold text-lg mb-2 text-[#0B3C68]">Innovation-Driven</h3>
-          <p class="text-gray-600">
-            Technology developed through engineering expertise and clinical insight.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- STATISTICS COUNTER -->
-  <section class="py-16 bg-gradient-to-r from-[#0B3C68] to-[#008ED6] text-white overflow-hidden">
+  <section id="statistics-section"
+    class="py-16 bg-gradient-to-r from-[#0B3C68] to-[#008ED6] text-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8 text-center">
         <div data-aos="zoom-in">
@@ -253,63 +252,283 @@
     </div>
   </section>
 
+
+  <!-- PRODUCTS SECTION -->
+  <section class="bg-[#E6F4FF] py-16">
+    <div class="max-w-7xl mx-auto px-6" data-aos="fade-down">
+      <h1 class="text-4xl font-bold text-[#0B3C68]">Our Products</h1>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        Reliable respiratory support solutions developed for NICU and pediatric care.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- 1. RespiAssist -->
+      <div class="flip-card group h-[320px] perspective-1000 block">
+        <div
+          class="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 shadow-2xl rounded-2xl">
+          <!-- Front -->
+          <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white">
+            <img src="assets/img/respiassist-basic-hero.jpg"
+              style="height: 192px; width: 100%; object-fit: cover; display: block;" alt="RespiAssist">
+            <div class="flex items-center justify-center bg-white p-4" style="height: calc(100% - 192px);">
+              <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist</h3>
+            </div>
+          </div>
+          <!-- Back -->
+          <div
+            class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+            <h3 class="font-bold text-lg mb-3">Key Features</h3>
+            <ul class="text-sm text-left space-y-1 list-disc pl-5">
+              <li>NIV therapies suitable for neonatal & pediatric patients</li>
+              <li>Precise FiO₂ and flow delivery</li>
+              <li>Built-in blower for consistent air supply</li>
+              <li>Smart alarm with audio-visual indicators</li>
+            </ul>
+            <a href="respiassist.html"
+              class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+              More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. RespiAssist Advance -->
+      <div class="flip-card group h-[320px] perspective-1000 block">
+        <div
+          class="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 shadow-2xl rounded-2xl">
+          <!-- Front -->
+          <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white">
+            <img src="assets/img/respiassist-advance-hero.jpg"
+              style="height: 192px; width: 100%; object-fit: cover; display: block;" alt="RespiAssist Advance">
+            <div class="flex items-center justify-center bg-white p-4" style="height: calc(100% - 192px);">
+              <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist Advance</h3>
+            </div>
+          </div>
+          <!-- Back -->
+          <div
+            class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+            <h3 class="font-bold text-lg mb-3">Key Features</h3>
+            <ul class="text-sm text-left space-y-1 list-disc pl-5">
+              <li>Larger interactive display</li>
+              <li>Advanced therapy modes</li>
+              <li>Real-time flow, pressure & FiO₂ monitoring</li>
+              <li>Designed for complex NICU scenarios</li>
+            </ul>
+            <a href="respiassist-advance.html"
+              class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+              More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Humidifier Series -->
+      <div class="flip-card group h-[320px] perspective-1000 block">
+        <div
+          class="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 shadow-2xl rounded-2xl">
+          <!-- Front -->
+          <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white">
+            <img src="assets/img/khc3000-new.png" style="height: 192px; width: 100%; object-fit: cover; display: block;"
+              alt="Humidifier Series">
+            <div class="flex items-center justify-center bg-white p-4" style="height: calc(100% - 192px);">
+              <h3 class="font-bold text-xl text-[#0B3C68] text-center">Humidifier Series</h3>
+            </div>
+          </div>
+          <!-- Back -->
+          <div
+            class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+            <h3 class="font-bold text-lg mb-3">Key Features</h3>
+            <ul class="text-sm text-left space-y-1 list-disc pl-5">
+              <li>Full servo-controlled heating</li>
+              <li>Multiple therapy modes</li>
+              <li>Bright 7-segment temperature display</li>
+              <li>Accurate temperature control</li>
+            </ul>
+            <a href="humidifiers.html"
+              class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+              More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- LOGO SLIDER — ABOVE TESTIMONIALS -->
   <section class="py-14 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-      <h3 class="text-2xl font-bold text-[#0B3C68] mb-6">
+      <h3 class="text-2xl font-bold text-[#0B3C68] mb-10 text-left">
         Trusted by leading hospitals and care centers
       </h3>
 
-      <div class="overflow-hidden relative">
-        <div class="flex gap-12 slider-track">
-          <!-- duplicate set for infinite scroll -->
-          <img src="assets/img/logo1.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo2.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo3.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo4.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo5.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo6.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo7.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo8.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo9.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo10.png" class="h-14 logo-gray" />
-
-          <!-- Duplicated Set -->
-          <img src="assets/img/logo1.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo2.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo3.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo4.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo5.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo6.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo7.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo8.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo9.png" class="h-14 logo-gray" />
-          <img src="assets/img/logo10.png" class="h-14 logo-gray" />
+      <div class="swiper logo-swiper py-24">
+        <div class="swiper-wrapper items-center">
+          <div class="swiper-slide"><img src="assets/img/logo1.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo2.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo3.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo4.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo5.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo6.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo7.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo8.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo9.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
+          <div class="swiper-slide"><img src="assets/img/logo10.png" class="h-12 md:h-14 mx-auto logo-gray" /></div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
+
+
+
+
+
+
 
   <!-- TESTIMONIALS -->
   <section class="py-16 bg-[#F2F3F5]">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-[#0B3C68] mb-6">
+      <h2 class="text-3xl font-bold text-[#0B3C68] mb-8">
         What clinicians say
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white rounded-2xl shadow">
-          “Consistent performance with intuitive controls — ideal for NICU teams.”
+      <div class="grid lg:grid-cols-12 gap-6 lg:gap-10">
+        <!-- LEFT: Grid of 6 Small Cards (Smaller area: 4 cols) -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <!-- Card 1 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“Consistent performance with intuitive controls — ideal for NICU teams.”"
+            data-author="Dr. Sarah Johnson, Neonatologist">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Reliability</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“Reliable support and thoughtful engineering behind every device.”"
+            data-author="Dr. A. Patel, Chief of Pediatics">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Engineering</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“Simple to operate, yet clinically capable for critical cases.”"
+            data-author="Nurse Manager, City Hospital">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Simplicity</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“The precise flow control has significantly improved our patient outcomes.”"
+            data-author="Respiratory Therapist, Wellness Center">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Precision</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“Exceptional build quality and very responsive customer support.”"
+            data-author="Biomedical Engineer, TechCare">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Support</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="testimonial-card p-3 bg-white rounded-xl shadow cursor-pointer transition-all duration-300 border border-transparent hover:border-[#008ED6] group"
+            data-text="“A game changer for our rural care centers due to its portability.”"
+            data-author="Dr. M. Lee, Outreach Coordinator">
+            <div class="h-1.5 w-6 bg-[#008ED6] mb-2 rounded-full group-hover:bg-white transition-colors"></div>
+            <p
+              class="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white/80 transition-colors">
+              Portability</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow">
-          “Reliable support and thoughtful engineering behind every device.”
-        </div>
-        <div class="p-6 bg-white rounded-2xl shadow">
-          “Simple to operate, yet clinically capable.”
+
+        <!-- RIGHT: Large Preview Pane (Expanded area: 8 cols) -->
+        <div
+          class="lg:col-span-8 relative bg-white rounded-2xl shadow-xl p-10 md:p-16 flex flex-col justify-center min-h-[340px]">
+          <div class="absolute top-6 left-8 text-8xl font-serif text-[#E6F4FF] select-none">“</div>
+
+          <div id="testimonial-preview" class="relative z-10 transition-opacity duration-300">
+            <p id="preview-text" class="text-2xl md:text-3xl font-light text-[#0B3C68] leading-normal italic mb-6">
+              “Consistent performance with intuitive controls — ideal for NICU teams.”
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="h-0.5 w-12 bg-[#008ED6]"></div>
+              <p id="preview-author" class="font-semibold text-gray-600">
+                Dr. Sarah Johnson, Neonatologist
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    /* Interaction Styles for Testimonial Cards */
+    .testimonial-card.active,
+    .testimonial-card:hover {
+      background-color: #0B3C68;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(11, 60, 104, 0.2);
+    }
+  </style>
+
+  <script>
+    // Testimonial Interaction Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.testimonial-card');
+      const previewText = document.getElementById('preview-text');
+      const previewAuthor = document.getElementById('preview-author');
+      const previewContainer = document.getElementById('testimonial-preview');
+
+      // Set first card as active initially
+      if (cards.length > 0) cards[0].classList.add('active');
+
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          // Remove active from all
+          cards.forEach(c => c.classList.remove('active'));
+          // Add active to current
+          card.classList.add('active');
+
+          // Fade out content
+          previewContainer.style.opacity = '0';
+
+          setTimeout(() => {
+            // Update content
+            previewText.textContent = card.getAttribute('data-text');
+            previewAuthor.textContent = card.getAttribute('data-author');
+
+            // Fade in
+            previewContainer.style.opacity = '1';
+          }, 200);
+        });
+      });
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="bg-[#0B3C68] text-white py-10 mt-10">
@@ -359,53 +578,11 @@
       document.body.style.overflow = 'auto';
     }
   });
+</script>
 
-  // Animated Counter Logic
-  const counters = document.querySelectorAll('.stat-number');
-  const duration = 2000; // 2 seconds for all counters
+<script src="assets/js/counter.js"></script>
 
-  const runCounter = (counter) => {
-    const target = +counter.getAttribute('data-count');
-    const startTime = performance.now();
-
-    const updateCount = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-
-      // Easing function for smooth motion
-      const easeOutQuad = (t) => t * (2 - t);
-
-      const current = Math.floor(easeOutQuad(progress) * target);
-      counter.innerText = current.toLocaleString();
-
-      if (progress < 1) {
-        requestAnimationFrame(updateCount);
-      } else {
-        counter.innerText = target.toLocaleString();
-      }
-    };
-
-    requestAnimationFrame(updateCount);
-  };
-
-  // Trigger counter when visible
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target.querySelector('.stat-number');
-        if (counter && counter.innerText === '0') {
-          runCounter(counter);
-        }
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('[data-aos="zoom-in"]').forEach(el => {
-    if (el.querySelector('.stat-number')) {
-      observer.observe(el);
-    }
-  });
-
+<script>
   // Robust Alternating Video Logic (Dip-to-Fade)
   const videoElement = document.getElementById('hero-video');
   const sources = [
@@ -436,7 +613,36 @@
   }
 </script>
 
-});
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init -->
+<script>
+  var swiper = new Swiper(".logo-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 500, // 0.5s delay
+      disableOnInteraction: false,
+    },
+    speed: 600, // Smooth snap transition
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  });
 </script>
 <script src="assets/js/scroll-top.js"></script>
 
