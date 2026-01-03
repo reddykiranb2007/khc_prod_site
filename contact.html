@@ -87,37 +87,13 @@
     .hero-overlay {
       background: linear-gradient(to bottom right, rgba(0, 26, 58, .55), rgba(0, 142, 214, .25))
     }
-
-    /* Mobile Menu Styles */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      height: 100vh;
-      background: white;
-      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 90;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #0B3C68;
-    }
-
-    .mobile-menu.active {
-      right: 0;
-    }
   </style>
 </head>
 
 <body class="bg-white text-[#1B2430]">
 
   <!-- HEADER -->
-  <header class="glass-nav border-b sticky top-0 z-50 transition-all duration-300">
+  <header class="glass-nav sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.jpg" alt="KHC Logo" class="h-10">
@@ -150,7 +126,6 @@
         <a href="research.html" class="hover:text-[#008ED6]">Research</a>
         <a href="contact.html" class="hover:text-[#008ED6]">Contact</a>
       </div>
-      </nav>
     </div>
   </header>
 
@@ -196,27 +171,7 @@
     easing: 'ease-out-cubic'
   });
 
-  // Mobile Menu Logic
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const spans = menuToggle.querySelectorAll('span');
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-
-    // Hamburger animation
-    if (mobileMenu.classList.contains('active')) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      document.body.style.overflow = 'hidden';
-    } else {
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  });
   const contactForm = document.getElementById('contactForm');
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxoW8fkdZYxKYMPjTtfpvG7C_8AE7jI0NcT5rAOAWecTE-TglNd3YJ6bVhzGn5FNRQ7HQ/exec';
 
@@ -263,6 +218,7 @@
     });
   }
 </script>
+<script src="assets/js/mobile-menu.js"></script>
 <script src="assets/js/scroll-top.js"></script>
 
 </html>
