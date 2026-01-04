@@ -183,7 +183,18 @@ nav a:hover {
   border-radius: 1rem;
 }
 
+/* Desktop hover */
 .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Mobile touch - use active state */
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Keep flipped on focus for accessibility */
+.flip-card:focus-within .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -212,13 +223,16 @@ nav a:hover {
   z-index: 1;
 }
 
-/* Swap z-index on hover to ensure back is visible regardless of 3D context quirks */
-.flip-card:hover .flip-card-front {
+/* Swap z-index on hover/active to ensure back is visible */
+.flip-card:hover .flip-card-front,
+.flip-card:active .flip-card-front,
+.flip-card:focus-within .flip-card-front {
   z-index: 1;
 }
 
-
-.flip-card:hover .flip-card-back {
+.flip-card:hover .flip-card-back,
+.flip-card:active .flip-card-back,
+.flip-card:focus-within .flip-card-back {
   z-index: 2;
 }
 
