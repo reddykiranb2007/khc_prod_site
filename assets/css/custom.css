@@ -188,8 +188,8 @@ nav a:hover {
   transform: rotateY(180deg);
 }
 
-/* Mobile touch - use active state */
-.flip-card:active .flip-card-inner {
+/* Mobile auto-flip when in view */
+.flip-card.is-flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
 
