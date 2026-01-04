@@ -1,3 +1,129 @@
+/* ===== Design System Variables ===== */
+:root {
+  /* Color Palette */
+  --color-primary: #0B3C68;
+  --color-secondary: #008ED6;
+  --color-accent: #FF6B35;
+  /* Warm coral/orange for CTAs */
+  --color-accent-hover: #E55A2B;
+  --color-bg-light: #E6F4FF;
+  --color-bg-gray: #F3F4F6;
+  --color-text-primary: #1B2430;
+  --color-text-secondary: #4B5563;
+  --color-text-light: #6B7280;
+
+  /* Typography */
+  --font-size-base: 18px;
+  --font-size-sm: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  /* Spacing */
+  --section-padding-y: 5rem;
+  /* 80px */
+  --section-padding-y-sm: 3rem;
+  /* 48px on mobile */
+  --content-gap: 2.5rem;
+  /* 40px between content blocks */
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+}
+
+/* ===== Base Typography Enhancement ===== */
+body {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text-primary);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Subheading Strategy */
+h2 {
+  font-weight: 600;
+  /* semibold */
+  color: var(--color-primary);
+}
+
+h3 {
+  font-weight: 600;
+  /* semibold */
+  color: var(--color-primary);
+}
+
+h4 {
+  font-weight: 600;
+  /* semibold */
+}
+
+/* Section Spacing Enhancement */
+section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: var(--section-padding-y-sm);
+    padding-bottom: var(--section-padding-y-sm);
+  }
+}
+
+/* ===== CTA Button Enhancement ===== */
+.btn-primary,
+.btn-cta {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: var(--transition-base);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
+}
+
+.btn-primary:hover,
+.btn-cta:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+}
+
+/* ===== Link Hover States ===== */
+a {
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Navigation Links */
+nav a {
+  transition: var(--transition-fast);
+}
+
+nav a:hover {
+  color: var(--color-accent) !important;
+}
+
+/* ===== Card Hover Enhancement ===== */
+.card,
+.glass-card {
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
 /* Glassmorphism Utilities */
 .glass-nav {
   background: rgba(255, 255, 255, 0.85);
