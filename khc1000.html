@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RespiAssist — KHC</title>
+    <title>KHC 1000 — Humidifier</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -50,6 +50,23 @@
             background: #0B3C68;
         }
 
+        .btn-outline {
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #0B3C68;
+            color: #0B3C68;
+        }
+
+        .btn-outline:hover {
+            background: #E6F4FF;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom right,
+                    rgba(0, 26, 58, 0.55),
+                    rgba(0, 142, 214, 0.25));
+        }
+
         .back-to-products {
             position: fixed;
             bottom: 2rem;
@@ -76,7 +93,6 @@
 </head>
 
 <body class="bg-[#F3F4F6] text-[#1B2430]">
-
     <!-- HEADER -->
     <header class="glass-nav sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -118,7 +134,6 @@
         <div class="relative w-full max-w-6xl px-4 flex">
 
             <!-- MAIN PAGE (Single Page Display) -->
-            <!-- MAIN PAGE (Single Page Display) -->
             <div
                 class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
 
@@ -132,130 +147,161 @@
                         <div class="section grid md:grid-cols-2 gap-10 items-center !py-12"> <!-- Adjusted padding -->
 
                             <div data-aos="fade-right">
-                                <h1 class="headline">RespiAssist</h1>
+                                <h1 class="headline">KHC 1000</h1>
                                 <p class="subtext mt-3">
-                                    Non-invasive ventilation system designed for neonatal and pediatric care.
+                                    Reliable respiratory humidifier designed for consistent care.
                                 </p>
                             </div>
 
-                            <img src="assets/img/respiassist-basic-hero.jpg" class="rounded-2xl shadow-xl animate-float"
-                                alt="RespiAssist NIV System" data-aos="fade-left" loading="lazy">
+                            <img src="assets/img/KHC1000.png" class="rounded-2xl shadow-xl animate-float"
+                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-left" loading="lazy">
                         </div>
                     </section>
 
                     <!-- ============================================ -->
-                    <!-- FEATURES SECTION                             -->
+                    <!-- CONTENT SECTION                              -->
                     <!-- ============================================ -->
 
-                    <section id="features" class="py-10 max-w-7xl mx-auto px-6 space-y-10" data-aos="fade-up">
-                        <div>
-                            <h2 class="text-2xl font-bold mb-2 text-[#0B3C68]">
-                                Key Features
-                            </h2>
-                            <!-- Features Card Grid -->
-                            <div class="grid md:grid-cols-3 gap-6">
+                    <section class="section space-y-12 px-6 md:px-12 py-10">
 
+                        <!-- Key Features Section (Moved Up) -->
+                        <div class="w-full">
+                            <h2 class="text-2xl font-bold mb-6 text-[#0B3C68]">Key Features</h2>
+                            <div class="grid md:grid-cols-3 gap-6">
                                 <!-- Card 1 -->
                                 <div
                                     class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Advanced Therapy</h3>
+                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Servo-Controlled Heating</h3>
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        NIV therapies suitable for neonatal & pediatric patients. Designed specifically
-                                        for critical care in NICU & PICU environments.
+                                        Features full servo-controlled heating to maintain optimal humidity levels
+                                        for diverse therapies.
                                     </p>
                                 </div>
 
                                 <!-- Card 2 -->
                                 <div
                                     class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Precision & Performance</h3>
+                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Versatile Modes</h3>
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        Features a built-in blower for consistent air supply, delivering precise FiO₂
-                                        and flow control for effective treatment.
+                                        Supports multiple therapy modes, offering flexibility for both invasive and
+                                        non-invasive respiratory support.
                                     </p>
                                 </div>
 
                                 <!-- Card 3 -->
                                 <div
                                     class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Smart Interface</h3>
+                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Clear Monitoring</h3>
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        A compact, easy-to-use platform with a clear integrated display and smart alarms
-                                        featuring audio-visual indicators.
+                                        Equipped with a bright 7-segment display for easy reading and accurate
+                                        temperature administration.
                                     </p>
                                 </div>
-
                             </div>
-
-                            <h3 class="mt-10 text-xl font-bold text-[#0B3C68]">
-                                Technical Specifications
-                            </h3>
-
-                            <div class="overflow-x-auto mt-3">
-                                <table class="w-full text-sm border rounded-xl">
-                                    <tbody class="divide-y">
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Display</td>
-                                            <td class="p-3">5-inch touch display</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Therapy Modes</td>
-                                            <td class="p-3">
-                                                nCPAP, Bubble CPAP, HFNC/O₂
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">FiO₂ Range</td>
-                                            <td class="p-3">21 – 100 %</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Flow Range</td>
-                                            <td class="p-3">4 – 25 / 40 LPM</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Pressure (PEEP)</td>
-                                            <td class="p-3">1 – 10 cm H₂O</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Monitoring</td>
-                                            <td class="p-3">
-                                                FiO₂, Flow, Pressure, Alarms
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Power</td>
-                                            <td class="p-3">100–265 V AC</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <button onclick="openBrochureModal('assets/brochures/respiassist.pdf')"
-                                class="btn-primary mt-8 inline-block">
-                                View Brochure (PDF)
-                            </button>
                         </div>
+                        <div class="border-t border-gray-100 pt-8"></div>
+
+                        <!-- KHC 1000 -->
+                        <div class="grid md:grid-cols-2 gap-10 items-center">
+                            <img src="assets/img/khc1000.png" class="rounded-2xl shadow-xl animate-float"
+                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-right" loading="lazy">
+
+                            <div>
+                                <h3 class="text-xl font-bold text-[#0B3C68] mb-3">Respiratory Humidifier</h3>
+
+
+
+                                <h4 class="mt-5 font-semibold">Key Specifications</h4>
+                                <ul class="text-gray-600 text-sm mt-2 space-y-1">
+                                    <li>— Heater plate capacity: 150W (max 115°C)</li>
+                                    <li>— Temperature range: 5 to 70°C (±0.3°C within 25–45°C)</li>
+                                    <li>— Recommended ambient: 18–26°C</li>
+                                </ul>
+
+                                <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
+
+                                <div class="overflow-x-auto mt-3">
+                                    <table class="w-full text-sm border rounded-xl">
+                                        <tbody class="divide-y">
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Dimensions</td>
+                                                <td class="p-3">W135 × D170 × H156 mm</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Weight</td>
+                                                <td class="p-3">2.9 kg (without chamber)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Supply Voltage</td>
+                                                <td class="p-3">220 V, 50/60 Hz</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Current</td>
+                                                <td class="p-3">3 A (max)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Heater Plate Capacity</td>
+                                                <td class="p-3">150 W — up to 115 °C</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Temperature Range</td>
+                                                <td class="p-3">5 – 70 °C (±0.3 °C from 25 – 45 °C)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Flow Range</td>
+                                                <td class="p-3">
+                                                    Invasive: up to 40 L/min<br>
+                                                    Non-invasive: up to 60 L/min
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Warm-up Time</td>
+                                                <td class="p-3">Less than 30 minutes</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="p-3 font-medium">Standards</td>
+                                                <td class="p-3">
+                                                    IEC 60601-1, IEC 60601-1-2, ISO 8185
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <button onclick="openBrochureModal('assets/brochures/khc1000.pdf')"
+                                    class="btn-primary mt-6 inline-block">
+                                    View KHC 1000 Brochure
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Key Features Section (Full Width) -->
+
+
                     </section>
 
                 </div>
             </div>
 
             <!-- SIDE TABS (Navigation) -->
+            <!-- SIDE TABS (Navigation) -->
             <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
 
-                <!-- Tab 1: RespiAssist (Active) -->
+                <!-- Tab 1: RespiAssist -->
                 <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
+                    class="group relative block h-32 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#0B3C68] hover:w-16 md:hover:w-20 hover:shadow-lg">
                     <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
+                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
                         RespiAssist
                     </span>
                 </a>
@@ -269,11 +315,11 @@
                     </span>
                 </a>
 
-                <!-- Tab 3: KHC 1000 -->
+                <!-- Tab 3: KHC 1000 (Active) -->
                 <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#5FA8D3] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#0B3C68] hover:w-16 md:hover:w-20 hover:shadow-lg">
+                    class="group relative block h-28 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
                     <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
+                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
                         KHC 1000
                     </span>
                 </a>
@@ -290,6 +336,8 @@
 
         </div>
     </section>
+
+
 
     <footer class="bg-[#0B3C68] text-white py-12 mt-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
@@ -387,8 +435,6 @@
         offset: 50,
         easing: 'ease-out-cubic'
     });
-
-
 </script>
 <script src="assets/js/mobile-menu.js"></script>
 <script src="assets/js/brochure-modal.js"></script>
