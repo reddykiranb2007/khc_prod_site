@@ -183,19 +183,29 @@ nav a:hover {
   border-radius: 1rem;
 }
 
-/* Desktop hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+/* Desktop hover - only on larger screens */
+@media (min-width: 768px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
-/* Mobile auto-flip when in view */
-.flip-card.is-flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
+  /* Keep flipped on focus for accessibility */
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
-/* Keep flipped on focus for accessibility */
-.flip-card:focus-within .flip-card-inner {
-  transform: rotateY(180deg);
+  /* Swap z-index on hover/active to ensure back is visible */
+  .flip-card:hover .flip-card-front,
+  .flip-card:active .flip-card-front,
+  .flip-card:focus-within .flip-card-front {
+    z-index: 1;
+  }
+
+  .flip-card:hover .flip-card-back,
+  .flip-card:active .flip-card-back,
+  .flip-card:focus-within .flip-card-back {
+    z-index: 2;
+  }
 }
 
 .flip-card-front,
@@ -223,17 +233,52 @@ nav a:hover {
   z-index: 1;
 }
 
-/* Swap z-index on hover/active to ensure back is visible */
-.flip-card:hover .flip-card-front,
-.flip-card:active .flip-card-front,
-.flip-card:focus-within .flip-card-front {
-  z-index: 1;
-}
+/* Mobile: Disable flip, show stacked layout */
+@media (max-width: 767px) {
+  .flip-card {
+    perspective: none;
+    height: auto !important;
+  }
 
-.flip-card:hover .flip-card-back,
-.flip-card:active .flip-card-back,
-.flip-card:focus-within .flip-card-back {
-  z-index: 2;
+  .flip-card-inner {
+    transform: none !important;
+    transform-style: flat;
+    position: static !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+    height: auto !important;
+  }
+
+  .flip-card-front {
+    display: flex !important;
+    flex-direction: column;
+    border-radius: 1rem 1rem 0 0;
+    z-index: 1 !important;
+  }
+
+  .flip-card-front img {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .flip-card-back {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    background: linear-gradient(135deg, #0B3C68 0%, #008ED6 100%);
+    z-index: 1 !important;
+  }
 }
 
 
