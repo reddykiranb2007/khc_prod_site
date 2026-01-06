@@ -86,42 +86,118 @@
           </p>
         </div>
 
-        <!-- Mobile Product Navigation (visible only on mobile) -->
-        <div class="md:hidden mb-6 overflow-x-auto scrollbar-hide">
-          <div class="flex gap-3 min-w-max pb-2">
-            <a href="respiassist.html"
-              class="px-6 py-3 bg-[#008ED6] text-white rounded-full font-semibold text-sm whitespace-nowrap hover:bg-[#FF6B35] transition-colors shadow-md">
-              RespiAssist
-            </a>
-            <a href="respiassist-advance.html"
-              class="px-6 py-3 bg-[#008ED6] text-white rounded-full font-semibold text-sm whitespace-nowrap hover:bg-[#FF6B35] transition-colors shadow-md">
-              RespiAssist Advance
-            </a>
-            <a href="khc1000.html"
-              class="px-6 py-3 bg-[#008ED6] text-white rounded-full font-semibold text-sm whitespace-nowrap hover:bg-[#FF6B35] transition-colors shadow-md">
-              KHC 1000
-            </a>
-            <a href="khc3000.html"
-              class="px-6 py-3 bg-[#008ED6] text-white rounded-full font-semibold text-sm whitespace-nowrap hover:bg-[#FF6B35] transition-colors shadow-md">
-              KHC 3000
-            </a>
-          </div>
-        </div>
+        <!-- Product Catalog Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
 
-        <!-- Welcome/Intro Content -->
-        <div
-          class="flex flex-col justify-center items-center h-[300px] text-center bg-blue-50/50 rounded-xl border border-blue-100 border-dashed p-8">
-          <div class="w-16 h-16 bg-blue-100 text-[#008ED6] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+          <!-- 1. RespiAssist -->
+          <div class="flip-card group md:h-[320px] h-auto perspective-1000">
+            <div
+              class="flip-card-inner relative w-full h-full shadow-md rounded-2xl transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 border border-gray-100">
+              <!-- Front -->
+              <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
+                <img src="assets/img/respiassist-basic-hero.jpg" class="w-full h-48 object-cover" alt="RespiAssist">
+                <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist</h3>
+                </div>
+              </div>
+              <!-- Back -->
+              <div
+                class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+                <h3 class="font-bold text-lg mb-3">Key Features</h3>
+                <ul class="text-sm text-left space-y-1 list-disc pl-5">
+                  <li>NIV therapies suitable for neonatal & pediatric patients</li>
+                  <li>Precise FiO₂ and flow delivery</li>
+                  <li>Built-in blower for consistent air supply</li>
+                </ul>
+                <a href="respiassist.html"
+                  class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+                  More</a>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-semibold text-[#0B3C68] mb-2">Explore the Catalog</h3>
-          <p class="text-gray-500 max-w-sm">
-            Click on the <strong>tabs to the right</strong> to view detailed specifications for each product model.
-          </p>
+
+          <!-- 2. RespiAssist Advance -->
+          <div class="flip-card group md:h-[320px] h-auto perspective-1000">
+            <div
+              class="flip-card-inner relative w-full h-full shadow-md rounded-2xl transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 border border-gray-100">
+              <!-- Front -->
+              <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
+                <img src="assets/img/respiassist-advance-hero.jpg" class="w-full h-48 object-cover"
+                  alt="RespiAssist Advance">
+                <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist Advance</h3>
+                </div>
+              </div>
+              <!-- Back -->
+              <div
+                class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+                <h3 class="font-bold text-lg mb-3">Key Features</h3>
+                <ul class="text-sm text-left space-y-1 list-disc pl-5">
+                  <li>Larger interactive display</li>
+                  <li>Advanced therapy modes</li>
+                  <li>Real-time flow monitoring</li>
+                </ul>
+                <a href="respiassist-advance.html"
+                  class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+                  More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. KHC 1000 -->
+          <div class="flip-card group md:h-[320px] h-auto perspective-1000">
+            <div
+              class="flip-card-inner relative w-full h-full shadow-md rounded-2xl transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 border border-gray-100">
+              <!-- Front -->
+              <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
+                <img src="assets/img/khc-1000.png" class="w-full h-48 object-cover" alt="KHC 1000">
+                <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">KHC 1000</h3>
+                </div>
+              </div>
+              <!-- Back -->
+              <div
+                class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+                <h3 class="font-bold text-lg mb-3">Key Features</h3>
+                <ul class="text-sm text-left space-y-1 list-disc pl-5">
+                  <li>Full servo-controlled heating</li>
+                  <li>Multiple therapy modes</li>
+                  <li>Bright 7-segment display</li>
+                </ul>
+                <a href="khc1000.html"
+                  class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+                  More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. KHC 3000 -->
+          <div class="flip-card group md:h-[320px] h-auto perspective-1000">
+            <div
+              class="flip-card-inner relative w-full h-full shadow-md rounded-2xl transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 border border-gray-100">
+              <!-- Front -->
+              <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
+                <img src="assets/img/khc3000-new.png" class="w-full h-48 object-cover" alt="KHC 3000">
+                <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">KHC 3000</h3>
+                </div>
+              </div>
+              <!-- Back -->
+              <div
+                class="flip-card-back absolute inset-0 backface-hidden rotate-y-180 bg-[#0B3C68] text-white rounded-2xl flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B3C68] to-[#008ED6]">
+                <h3 class="font-bold text-lg mb-3">Key Features</h3>
+                <ul class="text-sm text-left space-y-1 list-disc pl-5">
+                  <li>High-accuracy feedback control</li>
+                  <li>Intensive care design</li>
+                  <li>Advanced digital display</li>
+                </ul>
+                <a href="khc3000.html"
+                  class="inline-block mt-4 px-4 py-2 bg-white text-[#0B3C68] text-sm font-bold rounded-full shadow hover:bg-gray-100 transition-colors">Know
+                  More</a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
