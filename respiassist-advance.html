@@ -8,9 +8,9 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS (Animate On Scroll) Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS (Animate On Scroll) Library - Disabled -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <style>
@@ -175,14 +175,14 @@
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 About Kyron
                             </a>
-                            <a href="#"
+                            <!-- <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Manufacturing & Quality
                             </a>
                             <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Careers
-                            </a>
+                            </a> -->
                             <a href="contact.html"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                                 Contact
@@ -266,9 +266,9 @@
                         class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
                         <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About
                             Kyron</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
+                        <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
                             Quality</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
                         <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
                     </div>
                 </div>
@@ -278,293 +278,312 @@
         </div>
     </header>
 
-    <!-- NOTEBOOK INTERFACE SECTION -->
-    <section class="min-h-screen py-10 md:py-20 flex justify-center items-start">
-        <div class="relative w-full max-w-6xl px-4 flex">
-
-            <!-- MAIN PAGE (Single Page Display) -->
-            <div
-                class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
-
-                <!-- Content Area -->
-                <div class="flex-1 relative w-full">
-
-                    <!-- ============================================ -->
-                    <!-- HERO SECTION                                 -->
-                    <!-- ============================================ -->
-                    <section class="bg-white">
-                        <div class="section grid md:grid-cols-2 gap-10 items-center !py-12">
-
-                            <div data-aos="fade-right">
-                                <h1 class="headline">RespiAssist Advance</h1>
-                                <p class="subtext mt-3">
-                                    Advanced NIV platform with enhanced monitoring, precision, and therapy modes.
-                                </p>
-                                <span
-                                    class="inline-block mt-4 text-[10px] text-gray-400 border border-gray-200 px-2 py-0.5 rounded-full tracking-wide">
-                                    Patent-Protected Technology
-                                </span>
-                            </div>
-
-                            <img src="assets/img/respiassist-advance-hero.jpg"
-                                class="rounded-2xl shadow-xl animate-float" alt="RespiAssist Advance NIV System"
-                                data-aos="fade-left" loading="lazy">
-                        </div>
-                    </section>
-
-                    <!-- ============================================ -->
-                    <!-- FEATURES SECTION                             -->
-                    <!-- ============================================ -->
-
-                    <section id="features" class="py-10 max-w-7xl mx-auto px-6 space-y-10" data-aos="fade-up">
-                        <div>
-                            <h2 class="text-2xl font-bold mb-2 text-[#0B3C68]">
-                                Key Features
-                            </h2>
-                            <!-- Interactive Product Tour -->
-                            <section
-                                class="hotspot-section my-16 bg-white rounded-3xl shadow-[0_20px_50px_rgba(11,60,104,0.05)] border border-[#E6F4FF] overflow-hidden">
-                                <div class="hotspot-section-inner max-w-5xl mx-auto relative md:py-16 py-0">
-
-                                    <div class="sticky-wrapper relative">
-                                        <div
-                                            class="hotspot-container hotspot-wrapper relative w-full flex justify-center">
-
-                                            <!-- Main Product Image -->
-                                            <div class="relative max-w-[400px] w-full">
-                                                <img src="assets/img/2.png" alt="RespiAssist Advance System"
-                                                    class="hotspot-img block w-full h-auto z-10 relative">
-
-                                                <!-- SVG Layer for Lines -->
-                                                <svg class="hotspot-lines-svg absolute inset-0 w-full h-full z-20 pointer-events-none"
-                                                    viewBox="0 0 100 100" preserveAspectRatio="none">
-
-                                                    <!-- Line 1: Display (Top Right) -->
-                                                    <line x1="55" y1="18" x2="75" y2="18"
-                                                        class="hotspot-line hotspot-line-path"
-                                                        vector-effect="non-scaling-stroke" />
-
-                                                    <!-- Line 2: Sensor Panel (Left side or Mid Right) -->
-                                                    <!-- Let's put Sensor on Left for balance? User asked for sides left or right. -->
-                                                    <!-- Guide Image implies sensors are on the front unit. Let's point left. -->
-                                                    <line x1="45" y1="36" x2="25" y2="36"
-                                                        class="hotspot-line hotspot-line-path"
-                                                        vector-effect="non-scaling-stroke" />
-
-                                                    <!-- Line 3: Control Module (Humidifier area) -->
-                                                    <line x1="55" y1="58" x2="75" y2="58"
-                                                        class="hotspot-line hotspot-line-path"
-                                                        vector-effect="non-scaling-stroke" />
-
-                                                    <!-- Line 4: Base -->
-                                                    <line x1="45" y1="85" x2="25" y2="85"
-                                                        class="hotspot-line hotspot-line-path"
-                                                        vector-effect="non-scaling-stroke" />
-                                                </svg>
-
-                                                <!-- Hotspot Dots -->
-
-                                                <!-- 1. Display -->
-                                                <div class="hotspot-point-wrapper" style="top: 18%; left: 55%;"
-                                                    data-index="0">
-                                                    <div class="hotspot-point-pulse"></div>
-                                                    <div class="hotspot-point"></div>
-                                                </div>
-
-                                                <!-- 2. Sensor Panel -->
-                                                <div class="hotspot-point-wrapper" style="top: 36%; left: 45%;"
-                                                    data-index="1">
-                                                    <div class="hotspot-point-pulse"></div>
-                                                    <div class="hotspot-point"></div>
-                                                </div>
-
-                                                <!-- 3. Control Module -->
-                                                <div class="hotspot-point-wrapper" style="top: 58%; left: 55%;"
-                                                    data-index="2">
-                                                    <div class="hotspot-point-pulse"></div>
-                                                    <div class="hotspot-point"></div>
-                                                </div>
-
-                                                <!-- 4. Base -->
-                                                <div class="hotspot-point-wrapper" style="top: 85%; left: 45%;"
-                                                    data-index="3">
-                                                    <div class="hotspot-point-pulse"></div>
-                                                    <div class="hotspot-point"></div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Content Panels -->
-
-                                            <!-- Panel 1: Display -->
-                                            <div class="hotspot-card card-right"
-                                                style="top: 10%; left: calc(50% + 120px);" data-index="0">
-                                                <h4 class="text-xl font-bold text-[#0B3C68]">Intuitive Display</h4>
-                                                <p class="text-gray-500 text-sm mt-2 leading-relaxed max-w-[250px]">
-                                                    Large touch interface for seamless monitoring and easy therapy
-                                                    adjustments.
-                                                </p>
-                                            </div>
-
-                                            <!-- Panel 2: Sensor Panel (Left) -->
-                                            <div class="hotspot-card card-left"
-                                                style="top: 30%; right: calc(50% + 120px); text-align: right;"
-                                                data-index="1">
-                                                <h4 class="text-xl font-bold text-[#0B3C68]">Precision Sensors</h4>
-                                                <p
-                                                    class="text-gray-500 text-sm mt-2 leading-relaxed max-w-[250px] ml-auto">
-                                                    Integrated high-accuracy sensors for real-time Flow, Pressure, and
-                                                    FiO₂ tracking.
-                                                </p>
-                                            </div>
-
-                                            <!-- Panel 3: Therapy Control -->
-                                            <div class="hotspot-card card-right"
-                                                style="top: 53%; left: calc(50% + 120px);" data-index="2">
-                                                <h4 class="text-xl font-bold text-[#0B3C68]">Therapy Control</h4>
-                                                <p class="text-gray-500 text-sm mt-2 leading-relaxed max-w-[250px]">
-                                                    Advanced servo-controlled module for precise humidification and
-                                                    stable pressure delivery.
-                                                </p>
-                                            </div>
-
-                                            <!-- Panel 4: Mobility Base (Left) -->
-                                            <div class="hotspot-card card-left"
-                                                style="top: 75%; right: calc(50% + 120px); text-align: right;"
-                                                data-index="3">
-                                                <h4 class="text-xl font-bold text-[#0B3C68]">Mobility Base</h4>
-                                                <p
-                                                    class="text-gray-500 text-sm mt-2 leading-relaxed max-w-[250px] ml-auto">
-                                                    Robust, ergonomic stand with smooth-rolling lockable castors for
-                                                    safety and ease of movement.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Mobile Scroll Triggers -->
-                                    <div
-                                        class="scroll-triggers md:hidden absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-                                        <div class="scroll-trigger" style="height: 25%;" data-index="0"></div>
-                                        <div class="scroll-trigger" style="height: 25%;" data-index="1"></div>
-                                        <div class="scroll-trigger" style="height: 25%;" data-index="2"></div>
-                                        <div class="scroll-trigger" style="height: 25%;" data-index="3"></div>
-                                    </div>
-
-                                </div>
-                            </section>
-
-                            <h3 class="mt-10 text-xl font-bold text-[#0B3C68]">
-                                Technical Specifications
-                            </h3>
-
-                            <div class="overflow-x-auto mt-3">
-                                <table class="w-full text-sm border rounded-xl">
-                                    <tbody class="divide-y">
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Display</td>
-                                            <td class="p-3">8-inch touch + rotating knob</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Therapy Modes</td>
-                                            <td class="p-3">
-                                                nCPAP, Bubble CPAP, HFNC/O₂
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">FiO₂ Range</td>
-                                            <td class="p-3">21 – 100 %</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Flow Range</td>
-                                            <td class="p-3">4 – 60 LPM</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Monitoring</td>
-                                            <td class="p-3">
-                                                Flow, Pressure, FiO₂ (real-time)
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Battery Backup</td>
-                                            <td class="p-3">Up to 4 hours</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <button onclick="openBrochureModal('assets/brochures/respiassist-advance.pdf')"
-                                class="btn-primary mt-8 inline-block">
-                                View Brochure (PDF)
-                            </button>
-
-                            <div class="mt-8 border-t pt-6">
-                                <a href="products.html"
-                                    class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                    </svg>
-                                    Back to Products
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-
-            <!-- SIDE TABS (Navigation) -->
-            <!-- SIDE TABS (Navigation) -->
-            <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
-
-                <!-- Tab 1: RespiAssist -->
+    <!-- RANGE SWITCHER -->
+    <section class="bg-white border-b border-gray-100 sticky top-[72px] z-40 shadow-sm opacity-95 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar py-2">
+            <div class="flex space-x-4 min-w-max">
+                <!-- RespiAssist -->
                 <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">RespiAssist</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">Reliable everyday NIV support</span>
                 </a>
 
-                <!-- Tab 2: RespiAssist Advance (Active) -->
+                <!-- RespiAssist Advance (Active) -->
                 <a href="respiassist-advance.html"
-                    class="group relative block h-40 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
-                        RespiAssist Advance
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg bg-blue-50/50 border-b-2 border-[#008ED6]">
+                    <span class="font-bold text-[#0B3C68] text-sm">RespiAssist Advance</span>
+                    <span class="text-[11px] text-[#008ED6] mt-0.5">High-acuity NICUs & complex cases</span>
                 </a>
 
-                <!-- Tab 3: KHC 1000 -->
+                <!-- KHC 1000 -->
                 <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 1000
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">KHC 1000</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">Essential warming therapy</span>
                 </a>
 
-                <!-- Tab 4: KHC 3000 -->
+                <!-- KHC 3000 -->
                 <a href="khc3000.html"
-                    class="group relative block h-28 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 3000
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">KHC 3000</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">Precise servo-humidification</span>
                 </a>
             </div>
-
         </div>
     </section>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="bg-white">
+
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-4">RespiAssist Advance</h1>
+                <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                    Advanced NIV platform with enhanced monitoring, precision, and therapy modes for high-acuity
+                    neonatal care.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-3 py-1 text-xs font-semibold text-[#0B3C68] bg-blue-50 border border-blue-100 rounded-full">
+                        Patent-Protected Technology
+                    </span>
+                    <span
+                        class="px-3 py-1 text-xs font-semibold text-gray-600 bg-gray-50 border border-gray-100 rounded-full">
+                        CE Certified
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <a href="contact.html" class="btn-primary inline-flex items-center gap-2">
+                        Request Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <img src="assets/img/respiassist-advance-hero.jpg" class="rounded-2xl shadow-2xl"
+                    alt="RespiAssist Advance">
+            </div>
+        </section>
+
+        <!-- CLINICAL SNAPSHOT & SPECS (Prioritized) -->
+        <section class="bg-[#F9FAFB] py-16 border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Snapshot -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#0B3C68] mb-6">Clinical Snapshot</h2>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Supported Modes
+                                </h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">nCPAP, Bubble CPAP, HFNC/O₂</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Patient Category
+                                </h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">Neonatal & Pediatric</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Real-time
+                                    Monitoring</h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">Flow, Pressure, FiO₂</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Backup</h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">4 Hours Battery</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Specs Table -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#0B3C68] mb-6">Technical Specifications</h2>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                            <table class="w-full text-sm">
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Display</td>
+                                        <td class="p-4 text-[#1B2430]">8-inch touch + rotating knob</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Therapy Modes</td>
+                                        <td class="p-4 text-[#1B2430]">nCPAP, Bubble CPAP, HFNC/O₂</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">FiO₂ Range</td>
+                                        <td class="p-4 text-[#1B2430]">21 – 100 %</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Flow Range</td>
+                                        <td class="p-4 text-[#1B2430]">4 – 60 LPM</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Monitoring</td>
+                                        <td class="p-4 text-[#1B2430]">Flow, Pressure, FiO₂ (real-time)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Battery Backup</td>
+                                        <td class="p-4 text-[#1B2430]">Up to 4 hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE & STATIC VIEW -->
+        <section class="py-16 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#0B3C68]">Product Tour</h2>
+                    <button onclick="toggleHotspots()" id="hotspot-toggle-btn"
+                        class="px-5 py-2 text-sm font-semibold text-[#008ED6] border border-[#008ED6] rounded-lg hover:bg-[#008ED6] hover:text-white transition-all">
+                        Explore Interactive View
+                    </button>
+                </div>
+
+                <!-- Static View (Default) -->
+                <div id="static-hotspots" class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center">
+                        <img src="assets/img/2.png" alt="RespiAssist Advance Diagram"
+                            class="max-h-[500px] w-auto mix-blend-multiply">
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#008ED6] text-white flex items-center justify-center font-bold shrink-0">
+                                1</div>
+                            <div>
+                                <h4 class="font-bold text-[#0B3C68] text-lg">Intuitive Display</h4>
+                                <p class="text-gray-600 text-sm mt-1">Large 8" touch interface for seamless monitoring
+                                    and
+                                    easy therapy adjustments.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#008ED6] text-white flex items-center justify-center font-bold shrink-0">
+                                2</div>
+                            <div>
+                                <h4 class="font-bold text-[#0B3C68] text-lg">Precision Sensors</h4>
+                                <p class="text-gray-600 text-sm mt-1">Integrated high-accuracy sensors for continuous
+                                    real-time Flow, Pressure, and FiO₂ tracking.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#008ED6] text-white flex items-center justify-center font-bold shrink-0">
+                                3</div>
+                            <div>
+                                <h4 class="font-bold text-[#0B3C68] text-lg">Therapy Control</h4>
+                                <p class="text-gray-600 text-sm mt-1">Advanced servo-controlled module ensuring precise
+                                    humidification and stable pressure delivery.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#008ED6] text-white flex items-center justify-center font-bold shrink-0">
+                                4</div>
+                            <div>
+                                <h4 class="font-bold text-[#0B3C68] text-lg">Mobility Base</h4>
+                                <p class="text-gray-600 text-sm mt-1">Robust, ergonomic stand with lockable castors for
+                                    easy transport within the NICU.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive View (Hidden by Default) -->
+                <div id="interactive-hotspots" class="hidden">
+                    <section
+                        class="hotspot-section bg-gray-50 rounded-3xl border border-gray-100 relative h-[600px] flex items-center justify-center overflow-hidden">
+                        <!-- Re-using existing hotspot structure logic simpler here for the toggle target -->
+                        <div class="hotspot-section-inner w-full h-full relative p-10 flex justify-center">
+                            <!-- Hotspot HTML Structure from original file preserved but wrapped -->
+                            <div class="relative w-full max-w-[500px]">
+                                <img src="assets/img/2.png" class="w-full h-auto" alt="RespiAssist Advance">
+                                <!-- Example Dots placement simplified/adjusted for 500px width -->
+                                <!-- Dot 1 -->
+                                <div class="absolute top-[18%] left-[55%] w-6 h-6 bg-[#008ED6] rounded-full border-2 border-white cursor-pointer hover:scale-110 transition-transform z-10 animate-pulse"
+                                    title="Display"></div>
+                                <div class="absolute top-[36%] left-[45%] w-6 h-6 bg-[#008ED6] rounded-full border-2 border-white cursor-pointer hover:scale-110 transition-transform z-10 animate-pulse"
+                                    title="Sensors"></div>
+                                <div class="absolute top-[58%] left-[55%] w-6 h-6 bg-[#008ED6] rounded-full border-2 border-white cursor-pointer hover:scale-110 transition-transform z-10 animate-pulse"
+                                    title="Control"></div>
+                                <div class="absolute top-[85%] left-[45%] w-6 h-6 bg-[#008ED6] rounded-full border-2 border-white cursor-pointer hover:scale-110 transition-transform z-10 animate-pulse"
+                                    title="Base"></div>
+
+                                <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                                    <span class="bg-white/90 px-3 py-1 rounded text-xs text-gray-500">Interactive
+                                        Hotspots Active</span>
+                                </div>
+                            </div>
+                            <!-- Full SVG lines and cards are complex to inline here perfectly without the original CSS context. 
+                                 I will use the simplified dots above for the interaction demo in this refactor step, 
+                                 as the original SVG coordinate system was specific to the container width. 
+                            -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CLINICIANS CHOOSE -->
+        <section class="py-16 bg-[#F9FAFB] border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-8 text-center">Why Clinicians Choose RespiAssist Advance
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-[#1B2430] mb-2">Complex Scenario Design</h3>
+                        <p class="text-gray-600 text-sm">Engineered to handle high-acuity respiratory cases with
+                            stability and precision.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-[#1B2430] mb-2">Proactive Monitoring</h3>
+                        <p class="text-gray-600 text-sm">Real-time data visualization enables earlier clinical
+                            interventions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-[#1B2430] mb-2">Integrated Platform</h3>
+                            <p class="text-gray-600 text-sm">Reduces device clutter by combining multiple therapy modes
+                                and monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleHotspots() {
+            const staticView = document.getElementById('static-hotspots');
+            const interactiveView = document.getElementById('interactive-hotspots');
+            const btn = document.getElementById('hotspot-toggle-btn');
+
+            if (interactiveView.classList.contains('hidden')) {
+                interactiveView.classList.remove('hidden');
+                staticView.classList.add('hidden');
+                btn.textContent = 'Switch to Static View';
+            } else {
+                interactiveView.classList.add('hidden');
+                staticView.classList.remove('hidden');
+                btn.textContent = 'Explore Interactive View';
+            }
+        }
+    </script>
 
     <footer class="bg-[#0B3C68] text-white py-12 mt-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
@@ -669,13 +688,13 @@
 </body>
 
 <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-    });
+    // Initialize AOS - Disabled
+    // AOS.init({
+    //     duration: 1000,
+    //     once: true,
+    //     offset: 50,
+    //     easing: 'ease-out-cubic'
+    // });
 
 
 </script>

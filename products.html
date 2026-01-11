@@ -8,9 +8,9 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS (Animate On Scroll) Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS (Animate On Scroll) Library - Disabled -->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <link rel="stylesheet" href="assets/css/custom.css">
 
   <style>
@@ -120,14 +120,14 @@
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 About Kyron
               </a>
-              <a href="#"
+              <!-- <a href="#"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 Manufacturing & Quality
               </a>
               <a href="#"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 Careers
-              </a>
+              </a> -->
               <a href="contact.html"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                 Contact
@@ -197,8 +197,8 @@
           </button>
           <div class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
             <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About Kyron</a>
-            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing & Quality</a>
-            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+            <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing & Quality</a>
+            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
             <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
           </div>
         </div>
@@ -218,9 +218,28 @@
         <!-- Restored Title Section Inside the Page -->
         <div data-aos="fade-down" class="mb-10 border-b-2 border-gray-100 pb-6">
           <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-3">Our Products</h1>
-          <p class="text-gray-500 text-lg leading-relaxed max-w-2xl italic">
-            "Reliable respiratory support solutions developed for NICU and pediatric care."
+          <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mb-6">
+            Explore Kyron’s neonatal respiratory systems, designed for different levels of clinical complexity and care
+            environments.
           </p>
+
+          <!-- Visual Filter Row -->
+          <div class="flex flex-wrap gap-2 md:gap-3">
+            <span
+              class="px-3 py-1 bg-blue-50 text-[#0B3C68] text-sm font-medium rounded-full border border-blue-100">Neonatal
+              NIV</span>
+            <span
+              class="px-3 py-1 bg-blue-50 text-[#0B3C68] text-sm font-medium rounded-full border border-blue-100">Advanced
+              NIV</span>
+            <span
+              class="px-3 py-1 bg-blue-50 text-[#0B3C68] text-sm font-medium rounded-full border border-blue-100">Humidification</span>
+            <span
+              class="px-3 py-1 bg-blue-50 text-[#0B3C68] text-sm font-medium rounded-full border border-blue-100">Essential
+              Care</span>
+            <span
+              class="px-3 py-1 bg-blue-50 text-[#0B3C68] text-sm font-medium rounded-full border border-blue-100">Advanced
+              Care</span>
+          </div>
         </div>
 
         <!-- Product Catalog Grid (Desktop) -->
@@ -235,7 +254,9 @@
                 <img src="assets/img/respiassist-advance-hero.jpg" class="w-full h-48 object-cover"
                   alt="RespiAssist Advance">
                 <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
-                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist Advance</h3>
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center mb-1">RespiAssist Advance</h3>
+                  <p class="text-xs text-gray-500 text-center font-medium">Best suited for: Level III NICUs · Advanced
+                    NIV</p>
                 </div>
               </div>
               <!-- Back -->
@@ -262,7 +283,9 @@
               <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
                 <img src="assets/img/respiassist-basic-hero.jpg" class="w-full h-48 object-cover" alt="RespiAssist">
                 <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
-                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">RespiAssist</h3>
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center mb-1">RespiAssist</h3>
+                  <p class="text-xs text-gray-500 text-center font-medium">Best suited for: Level II NICUs · Neonatal
+                    NIV</p>
                 </div>
               </div>
               <!-- Back -->
@@ -289,7 +312,9 @@
               <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
                 <img src="assets/img/khc3000-new.png" class="w-full h-48 object-cover" alt="KHC 3000">
                 <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
-                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">KHC 3000</h3>
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center mb-1">KHC 3000</h3>
+                  <p class="text-xs text-gray-500 text-center font-medium">Best suited for: Advanced Care ·
+                    Humidification</p>
                 </div>
               </div>
               <!-- Back -->
@@ -316,7 +341,9 @@
               <div class="flip-card-front absolute inset-0 backface-hidden rounded-2xl overflow-hidden bg-white z-[2]">
                 <img src="assets/img/khc-1000.png" class="w-full h-48 object-cover" alt="KHC 1000">
                 <div class="flex items-center justify-center bg-white p-4 md:h-[calc(100%-192px)]">
-                  <h3 class="font-bold text-xl text-[#0B3C68] text-center">KHC 1000</h3>
+                  <h3 class="font-bold text-xl text-[#0B3C68] text-center mb-1">KHC 1000</h3>
+                  <p class="text-xs text-gray-500 text-center font-medium">Best suited for: Essential Care ·
+                    Humidification</p>
                 </div>
               </div>
               <!-- Back -->
@@ -349,7 +376,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3 class="font-bold text-[#0B3C68] text-lg leading-tight">RespiAssist Advance</h3>
-                  <p class="text-xs text-gray-500 mt-1 truncate">Larger interactive display</p>
+                  <p class="text-xs text-gray-500 mt-1">Best suited for: Level III NICUs · Advanced NIV</p>
                 </div>
               </div>
               <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300 accordion-icon" fill="none"
@@ -383,7 +410,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3 class="font-bold text-[#0B3C68] text-lg leading-tight">RespiAssist</h3>
-                  <p class="text-xs text-gray-500 mt-1 truncate">NIV therapies for neonatal & pediatric</p>
+                  <p class="text-xs text-gray-500 mt-1">Best suited for: Level II NICUs · Neonatal NIV</p>
                 </div>
               </div>
               <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300 accordion-icon" fill="none"
@@ -417,7 +444,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3 class="font-bold text-[#0B3C68] text-lg leading-tight">KHC 3000</h3>
-                  <p class="text-xs text-gray-500 mt-1 truncate">High-accuracy feedback control</p>
+                  <p class="text-xs text-gray-500 mt-1">Best suited for: Advanced Care · Humidification</p>
                 </div>
               </div>
               <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300 accordion-icon" fill="none"
@@ -451,7 +478,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3 class="font-bold text-[#0B3C68] text-lg leading-tight">KHC 1000</h3>
-                  <p class="text-xs text-gray-500 mt-1 truncate">Full servo-controlled heating</p>
+                  <p class="text-xs text-gray-500 mt-1">Best suited for: Essential Care · Humidification</p>
                 </div>
               </div>
               <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300 accordion-icon" fill="none"
@@ -646,13 +673,13 @@
 </body>
 
 <script>
-  // Initialize AOS
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 50,
-    easing: 'ease-out-cubic'
-  });
+  // Initialize AOS - Disabled
+  // AOS.init({
+  //   duration: 1000,
+  //   once: true,
+  //   offset: 50,
+  //   easing: 'ease-out-cubic'
+  // });
 </script>
 <script src="assets/js/mobile-menu.js"></script>
 <script src="assets/js/scroll-top.js"></script>

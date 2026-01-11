@@ -151,14 +151,14 @@
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 About Kyron
                             </a>
-                            <a href="#"
+                            <!-- <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Manufacturing & Quality
                             </a>
                             <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Careers
-                            </a>
+                            </a> -->
                             <a href="contact.html"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                                 Contact
@@ -242,9 +242,9 @@
                         class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
                         <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About
                             Kyron</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
+                        <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
                             Quality</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
                         <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
                     </div>
                 </div>
@@ -560,29 +560,106 @@
 
     <script src="assets/js/mobile-menu.js"></script>
     <script>
-        // Simple Form Handling
+        // Service Request Form Handling with Validation
         const form = document.getElementById('serviceForm');
         const successMessage = document.getElementById('successMessage');
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        if (form) {
+            // Helper: Show Error
+            const showError = (input, message) => {
+                clearError(input);
+                input.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-200');
+                input.classList.remove('border-gray-300', 'border-[#D1D5DB]');
 
-            // Basic validation is handled by browser 'required' attributes
-            // Here we simulate a successful submission
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'text-red-500 text-sm mt-1 error-msg font-medium';
+                errorDiv.innerText = message;
+                input.parentNode.insertBefore(errorDiv, input.nextSibling);
+            };
 
-            // Disable button
-            const btn = document.getElementById('submitBtn');
-            btn.innerHTML = 'Submitting...';
-            btn.disabled = true;
-            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            // Helper: Clear Error
+            const clearError = (input) => {
+                input.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-200');
+                input.classList.add('border-[#D1D5DB]'); // Restore default
+                const nextSibling = input.nextSibling;
+                if (nextSibling && nextSibling.classList && nextSibling.classList.contains('error-msg')) {
+                    nextSibling.remove();
+                }
+            };
 
-            // Simulate network delay
-            setTimeout(() => {
-                form.style.display = 'none';
-                successMessage.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }, 1000);
-        });
+            // Real-time validation clear
+            form.querySelectorAll('input, select, textarea').forEach(input => {
+                input.addEventListener('input', () => clearError(input));
+                input.addEventListener('change', () => clearError(input));
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isValid = true;
+                let firstErrorInput = null;
+
+                // Helper to validate required field
+                const validateRequired = (name, msg) => {
+                    const input = form.querySelector(`[name="${name}"]`);
+                    if (!input) return;
+                    if (!input.value.trim()) {
+                        showError(input, msg);
+                        isValid = false;
+                        if (!firstErrorInput) firstErrorInput = input;
+                    }
+                };
+
+                // Validate Fields
+                validateRequired('requestType', 'Please select a request category.');
+                validateRequired('productName', 'Please select a product.');
+                validateRequired('location', 'Installation location is required.');
+                validateRequired('summary', 'Short summary is required.');
+                validateRequired('description', 'Detailed description is required.');
+                validateRequired('hospitalName', 'Hospital name is required.');
+                validateRequired('contactName', 'Contact person name is required.');
+                validateRequired('role', 'Please select your role.');
+                validateRequired('phone', 'Phone number is required.');
+                validateRequired('email', 'Email address is required.');
+
+                // Email format
+                const emailInput = form.querySelector('[name="email"]');
+                if (emailInput && emailInput.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailInput.value)) {
+                        showError(emailInput, "Please enter a valid email address.");
+                        isValid = false;
+                        if (!firstErrorInput) firstErrorInput = emailInput;
+                    }
+                }
+
+                if (!isValid) {
+                    if (firstErrorInput) {
+                        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstErrorInput.focus({ preventScroll: true });
+                    }
+                    return;
+                }
+
+                // Simulate Submission
+                const btn = document.getElementById('submitBtn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Submitting...';
+                btn.disabled = true;
+                btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+                // Simulate network delay
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    successMessage.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Reset button state incase user reloads or goes back
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                }, 1000);
+            });
+        }
     </script>
 
 </body>

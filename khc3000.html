@@ -8,9 +8,9 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS (Animate On Scroll) Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS (Animate On Scroll) Library - Disabled -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <style>
@@ -179,14 +179,14 @@
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 About Kyron
                             </a>
-                            <a href="#"
+                            <!-- <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Manufacturing & Quality
                             </a>
                             <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Careers
-                            </a>
+                            </a> -->
                             <a href="contact.html"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                                 Contact
@@ -270,9 +270,9 @@
                         class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
                         <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About
                             Kyron</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
+                        <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
                             Quality</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
                         <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
                     </div>
                 </div>
@@ -282,225 +282,291 @@
         </div>
     </header>
 
-    <!-- NOTEBOOK INTERFACE SECTION -->
-    <section class="min-h-screen py-10 md:py-20 flex justify-center items-start">
-        <div class="relative w-full max-w-6xl px-4 flex">
-
-            <!-- MAIN PAGE (Single Page Display) -->
-            <div
-                class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
-
-                <!-- Content Area -->
-                <div class="flex-1 relative w-full">
-
-                    <!-- ============================================ -->
-                    <!-- HERO SECTION                                 -->
-                    <!-- ============================================ -->
-                    <section class="bg-white">
-                        <div class="section grid md:grid-cols-2 gap-10 items-center !py-12"> <!-- Adjusted padding -->
-
-                            <div data-aos="fade-right">
-                                <h1 class="headline">KHC 3000</h1>
-                                <p class="subtext mt-3">
-                                    Advanced respiratory humidifier with precision monitoring.
-                                </p>
-                            </div>
-
-                            <img src="assets/img/khc3000-new.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 3000 Advanced Humidifier" data-aos="fade-left" loading="lazy">
-                        </div>
-                    </section>
-
-                    <!-- ============================================ -->
-                    <!-- CONTENT SECTION                              -->
-                    <!-- ============================================ -->
-
-                    <section class="section space-y-12 px-6 md:px-12 py-10">
-
-                        <!-- Key Features Section (Moved Up) -->
-                        <div class="w-full">
-                            <h2 class="text-2xl font-bold mb-6 text-[#0B3C68]">Key Features</h2>
-                            <div class="grid md:grid-cols-3 gap-6">
-                                <!-- Card 1 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Precision Control</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Delivers high-accuracy feedback control for optimal temperature and humidity
-                                        management.
-                                    </p>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Intensive Care Design</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Specifically engineered to meet rigorous intensive care workflows and
-                                        enhance patient safety.
-                                    </p>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Advanced Interface</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Features an advanced digital display interface for clear, comprehensive
-                                        real-time monitoring.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-t border-gray-100 pt-8"></div>
-
-                        <!-- KHC 3000 -->
-                        <div class="grid md:grid-cols-2 gap-10 items-center">
-                            <img src="assets/img/khc3000-new.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 3000 Advanced Humidifier" data-aos="fade-right" loading="lazy">
-
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0B3C68] mb-3">Advanced Humidifier</h3>
-
-
-
-                                <h4 class="mt-5 font-semibold">Key Specifications</h4>
-                                <ul class="text-gray-600 text-sm mt-2 space-y-1">
-                                    <li>— Heater plate capacity: 200W (max 120°C)</li>
-                                    <li>— Temperature range: 5 to 75°C (±0.2°C within 25–50°C)</li>
-                                    <li>— Recommended ambient: 18–28°C</li>
-                                </ul>
-
-                                <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
-
-                                <div class="overflow-x-auto mt-3">
-                                    <table class="w-full text-sm border rounded-xl">
-                                        <tbody class="divide-y">
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Dimensions</td>
-                                                <td class="p-3">W145 × D180 × H165 mm</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Weight</td>
-                                                <td class="p-3">3.2 kg (without chamber)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Supply Voltage</td>
-                                                <td class="p-3">220 V, 50/60 Hz</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Current</td>
-                                                <td class="p-3">3.5 A (max)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Heater Plate Capacity</td>
-                                                <td class="p-3">200 W — up to 120 °C</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Temperature Range</td>
-                                                <td class="p-3">5 – 75 °C (±0.2 °C from 25 – 50 °C)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Flow Range</td>
-                                                <td class="p-3">
-                                                    Invasive: up to 50 L/min<br>
-                                                    Non-invasive: up to 70 L/min
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Warm-up Time</td>
-                                                <td class="p-3">Less than 25 minutes</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Standards</td>
-                                                <td class="p-3">
-                                                    IEC 60601-1, IEC 60601-1-2, ISO 8185
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <button onclick="openBrochureModal('assets/brochures/khc3000.pdf')"
-                                    class="btn-primary mt-6 inline-block">
-                                    View KHC 3000 Brochure
-                                </button>
-
-                                <div class="mt-8 border-t pt-6">
-                                    <a href="products.html"
-                                        class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                        </svg>
-                                        Back to Products
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </section>
-
-                </div>
-            </div>
-
-            <!-- SIDE TABS (Navigation) -->
-            <!-- SIDE TABS (Navigation) -->
-            <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
-
-                <!-- Tab 1: RespiAssist -->
+    <!-- RANGE SWITCHER -->
+    <section class="bg-white border-b border-gray-100 sticky top-[72px] z-40 shadow-sm opacity-95 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar py-2">
+            <div class="flex space-x-4 min-w-max">
+                <!-- RespiAssist -->
                 <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">RespiAssist</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">Reliable everyday NIV support</span>
                 </a>
 
-                <!-- Tab 2: RespiAssist Advance -->
+                <!-- RespiAssist Advance -->
                 <a href="respiassist-advance.html"
-                    class="group relative block h-40 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist Advance
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">RespiAssist Advance</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">High-acuity NICUs & complex cases</span>
                 </a>
 
-                <!-- Tab 3: KHC 1000 -->
+                <!-- KHC 1000 -->
                 <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 1000
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg hover:bg-gray-50 transition-colors border-b-2 border-transparent hover:border-[#008ED6]">
+                    <span class="font-bold text-gray-700 text-sm group-hover:text-[#008ED6]">KHC 1000</span>
+                    <span class="text-[11px] text-gray-500 mt-0.5">Essential warming therapy</span>
                 </a>
 
-                <!-- Tab 4: KHC 3000 (Active) -->
+                <!-- KHC 3000 (Active) -->
                 <a href="khc3000.html"
-                    class="group relative block h-28 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
-                        KHC 3000
-                    </span>
+                    class="group flex flex-col min-w-[220px] p-3 rounded-lg bg-blue-50/50 border-b-2 border-[#008ED6]">
+                    <span class="font-bold text-[#0B3C68] text-sm">KHC 3000</span>
+                    <span class="text-[11px] text-[#008ED6] mt-0.5">Precise servo-humidification</span>
                 </a>
             </div>
-
         </div>
     </section>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="bg-white">
+
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-4">KHC 3000</h1>
+                <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                    Advanced respiratory humidifier with precision monitoring and control.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-3 py-1 text-xs font-semibold text-[#0B3C68] bg-blue-50 border border-blue-100 rounded-full">
+                        Precision Servo-Control
+                    </span>
+                    <span
+                        class="px-3 py-1 text-xs font-semibold text-gray-600 bg-gray-50 border border-gray-100 rounded-full">
+                        ICU Optimized
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <a href="contact.html" class="btn-primary inline-flex items-center gap-2">
+                        Request Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <img src="assets/img/khc3000-new.png" class="rounded-2xl shadow-2xl" alt="KHC 3000 Humidifier"
+                    loading="lazy">
+            </div>
+        </section>
+
+        <!-- CLINICAL SNAPSHOT & SPECS (Prioritized) -->
+        <section class="bg-[#F9FAFB] py-16 border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Snapshot -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#0B3C68] mb-6">Clinical Snapshot</h2>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Monitoring
+                                    Control</h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">Servo-Controlled with Feedback</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Patient Category
+                                </h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">Neonatal, Pediatric, Adult</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">System
+                                    Integration</h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">Ventilators & NIV Systems</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Intended Care
+                                    Level</h3>
+                                <p class="text-lg font-medium text-[#1B2430] mt-1">ICU, NICU, PICU</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key
+                                Specifications</h3>
+                            <ul class="text-gray-600 text-sm space-y-2 bg-white p-4 rounded-xl border border-gray-100">
+                                <li>— Heater plate capacity: 200W (max 120°C)</li>
+                                <li>— Temperature range: 5 to 75°C (±0.2°C within 25–50°C)</li>
+                                <li>— Recommended ambient: 18–28°C</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Specs Table -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#0B3C68] mb-6">Technical Specifications</h2>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                            <table class="w-full text-sm">
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Dimensions</td>
+                                        <td class="p-4 text-[#1B2430]">W145 × D180 × H165 mm</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Weight</td>
+                                        <td class="p-4 text-[#1B2430]">3.2 kg (without chamber)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Supply Voltage</td>
+                                        <td class="p-4 text-[#1B2430]">220 V, 50/60 Hz</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Current</td>
+                                        <td class="p-4 text-[#1B2430]">3.5 A (max)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Heater Plate</td>
+                                        <td class="p-4 text-[#1B2430]">200 W — up to 120 °C</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Temp Range</td>
+                                        <td class="p-4 text-[#1B2430]">5 – 75 °C (±0.2 °C in range)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Flow Range</td>
+                                        <td class="p-4 text-[#1B2430]">
+                                            Invasive: up to 50 L/min<br>
+                                            Non-invasive: up to 70 L/min
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Warm-up time</td>
+                                        <td class="p-4 text-[#1B2430]">Less than 25 minutes</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Standards</td>
+                                        <td class="p-4 text-[#1B2430]">IEC 60601-1, IEC 60601-1-2, ISO 8185</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-6 text-right">
+                            <button onclick="openBrochureModal('assets/brochures/khc3000.pdf')"
+                                class="text-sm font-semibold text-[#008ED6] hover:text-[#0B3C68] hover:underline">
+                                View Full Brochure &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CLINICIANS CHOOSE -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-8 text-center">Why Clinicians Choose KHC 3000</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-[#1B2430] mb-2">Precision Control</h3>
+                        <p class="text-gray-600 text-sm">Precision-controlled humidification for fragile neonatal
+                            airways.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-[#1B2430] mb-2">ICU Ready</h3>
+                        <p class="text-gray-600 text-sm">Designed for intensive and high-dependency care environments.
+                        </p>
+                    </div>
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 text-[#008ED6]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-[#1B2430] mb-2">Advanced Feedback</h3>
+                        <p class="text-gray-600 text-sm">Advanced feedback mechanisms support consistent therapy
+                            delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY FEATURES GRID -->
+        <section class="py-16 bg-[#F9FAFB] border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-8">Key Features</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+                        <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Precision Control</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Delivers high-accuracy feedback control for optimal temperature and humidity management.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+                        <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Intensive Care Design</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Specifically engineered to meet rigorous intensive care workflows and enhance patient
+                            safety.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+                        <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Advanced Interface</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Features an advanced digital display interface for clear, comprehensive real-time
+                            monitoring.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Alternatives -->
+                <div class="mt-12 bg-white p-6 rounded-xl border border-gray-200">
+                    <h3 class="text-lg font-bold text-[#0B3C68] mb-4">Looking for essential humidification?</h3>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <a href="khc1000.html"
+                            class="flex-1 flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-[#008ED6] hover:shadow-md transition-all group">
+                            <div
+                                class="mr-3 p-2 bg-white text-[#008ED6] rounded-full group-hover:bg-[#008ED6] group-hover:text-white transition-colors shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">Explore KHC 1000</p>
+                                <p class="text-xs text-gray-500">For reliable everyday respiratory support</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-8 border-t pt-6">
+                    <a href="products.html"
+                        class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
 
 
@@ -607,13 +673,13 @@
 </body>
 
 <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-    });
+    // Initialize AOS - Disabled
+    // AOS.init({
+    //     duration: 1000,
+    //     once: true,
+    //     offset: 50,
+    //     easing: 'ease-out-cubic'
+    // });
 </script>
 <script src="assets/js/mobile-menu.js"></script>
 <script src="assets/js/brochure-modal.js"></script>

@@ -7,9 +7,9 @@
   <title>Contact Us — KHC</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS (Animate On Scroll) Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS (Animate On Scroll) Library - Disabled -->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/custom.css">
 
@@ -178,14 +178,14 @@
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 About Kyron
               </a>
-              <a href="#"
+              <!-- <a href="#"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 Manufacturing & Quality
               </a>
               <a href="#"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                 Careers
-              </a>
+              </a> -->
               <a href="contact.html"
                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                 Contact
@@ -255,8 +255,8 @@
           </button>
           <div class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
             <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About Kyron</a>
-            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing & Quality</a>
-            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+            <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing & Quality</a>
+            <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
             <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
           </div>
         </div>
@@ -283,6 +283,28 @@
 
       <textarea name="subject" class="border rounded-xl p-3 md:col-span-2" rows="5"
         placeholder="Tell us how we can help" required></textarea>
+
+      <div class="md:col-span-2 mt-1">
+        <label class="block text-sm font-semibold text-gray-700 mb-3">I am interested in:</label>
+        <div class="flex flex-wrap gap-4">
+          <label class="inline-flex items-center cursor-pointer group">
+            <input type="checkbox" name="intent" value="Product Demo"
+              class="w-4 h-4 text-[#008ED6] border-gray-300 rounded focus:ring-[#008ED6]">
+            <span class="ml-2 text-gray-600 group-hover:text-[#0B3C68] transition-colors">Product demo</span>
+          </label>
+          <label class="inline-flex items-center cursor-pointer group">
+            <input type="checkbox" name="intent" value="Technical/Clinical Query"
+              class="w-4 h-4 text-[#008ED6] border-gray-300 rounded focus:ring-[#008ED6]">
+            <span class="ml-2 text-gray-600 group-hover:text-[#0B3C68] transition-colors">Technical or clinical
+              query</span>
+          </label>
+          <label class="inline-flex items-center cursor-pointer group">
+            <input type="checkbox" name="intent" value="Service/AMC Support"
+              class="w-4 h-4 text-[#008ED6] border-gray-300 rounded focus:ring-[#008ED6]">
+            <span class="ml-2 text-gray-600 group-hover:text-[#0B3C68] transition-colors">Service or AMC support</span>
+          </label>
+        </div>
+      </div>
 
       <button type="submit" class="btn-primary md:col-span-2 w-fit">
         Submit
@@ -391,57 +413,152 @@
 </body>
 
 <script>
-  // Initialize AOS
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 50,
-    easing: 'ease-out-cubic'
-  });
+  // Initialize AOS - Disabled
+  // AOS.init({
+  //   duration: 1000,
+  //   once: true,
+  //   offset: 50,
+  //   easing: 'ease-out-cubic'
+  // });
 
 
+
+  // Custom Validation and Form Handling
   const contactForm = document.getElementById('contactForm');
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxoW8fkdZYxKYMPjTtfpvG7C_8AE7jI0NcT5rAOAWecTE-TglNd3YJ6bVhzGn5FNRQ7HQ/exec';
 
   if (contactForm) {
-    // Input restriction
+    // Helper: Show Error
+    const showError = (input, message) => {
+      // Clear existing error
+      clearError(input);
+
+      // Add error styles
+      input.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-200');
+      input.classList.remove('border-gray-300'); // Assuming default border
+
+      // Create error message
+      const errorDiv = document.createElement('div');
+      errorDiv.className = 'text-red-500 text-sm mt-1 error-msg font-medium';
+      errorDiv.innerText = message;
+
+      input.parentNode.insertBefore(errorDiv, input.nextSibling);
+    };
+
+    // Helper: Clear Error
+    const clearError = (input) => {
+      input.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-200');
+      const nextSibling = input.nextSibling;
+      if (nextSibling && nextSibling.classList && nextSibling.classList.contains('error-msg')) {
+        nextSibling.remove();
+      }
+    };
+
+    // Input restriction for mobile
     const mobileInput = contactForm.querySelector('input[name="mobile"]');
-    mobileInput.addEventListener('input', function () {
-      this.value = this.value.replace(/[^0-9]/g, '');
+    if (mobileInput) {
+      mobileInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (this.value.length > 0) clearError(this);
+      });
+    }
+
+    // Clear errors on input for other fields
+    contactForm.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('input', () => clearError(input));
     });
 
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
+      let isValid = true;
 
-      // Validation
-      if (mobileInput.value.length !== 10) {
-        alert("Please enter a valid 10-digit mobile number.");
-        mobileInput.focus();
-        return;
+      // Validate Full Name
+      const nameInput = contactForm.querySelector('input[name="name"]');
+      if (!nameInput.value.trim()) {
+        showError(nameInput, "Please enter your full name.");
+        isValid = false;
       }
 
-      const btn = contactForm.querySelector('button');
-      const originalText = btn.innerText;
+      // Validate Email
+      const emailInput = contactForm.querySelector('input[name="email"]');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailInput.value.trim()) {
+        showError(emailInput, "Email address is required.");
+        isValid = false;
+      } else if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, "Please enter a valid email address.");
+        isValid = false;
+      }
 
+      // Validate Mobile
+      if (!mobileInput.value.trim()) {
+        showError(mobileInput, "Mobile number is required.");
+        isValid = false;
+      } else if (mobileInput.value.length !== 10) {
+        showError(mobileInput, "Please enter a valid 10-digit mobile number.");
+        isValid = false;
+      }
+
+      // Validate Subject
+      const subjectInput = contactForm.querySelector('textarea[name="subject"]');
+      if (!subjectInput.value.trim()) {
+        showError(subjectInput, "Please tell us how we can help.");
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // Prepare Submission
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
       btn.innerText = 'Sending...';
       btn.disabled = true;
+      btn.classList.add('opacity-75', 'cursor-not-allowed');
 
       const formData = new FormData(contactForm);
       formData.append('source', 'Contact Page');
-      formData.append('timestamp', new Date());
+      // Handle Intents: Collect checked checkboxes manually if needed, or let FormData handle it.
+      // To be safe with Google Apps Script often reading `.parameter`, we might want to join them,
+      // but let's stick to standard FormData. 
+      // Note: For checkbox groups, FormData sends multiple entries with the same key 'intent'.
+
+      formData.append('timestamp', new Date().toString());
 
       fetch(SCRIPT_URL, { method: 'POST', body: formData })
         .then(response => {
-          alert("Message sent successfully! We will get back to you soon.");
+          // Success Feedback - Non-blocking
+          const successDiv = document.createElement('div');
+          successDiv.className = 'bg-green-50 border border-green-200 text-green-800 rounded-xl p-4 mt-4 text-center';
+          successDiv.innerHTML = '<strong>Message Sent!</strong> We will get back to you soon.';
+
           contactForm.reset();
+
+          // Remove any old success messages
+          const oldSuccess = contactForm.parentNode.querySelector('.bg-green-50');
+          if (oldSuccess) oldSuccess.remove();
+
+          contactForm.parentNode.insertBefore(successDiv, contactForm.nextSibling);
+
+          // Smooth scroll to message
+          successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          // Remove message after 5 seconds
+          setTimeout(() => {
+            successDiv.remove();
+          }, 8000);
         })
         .catch(error => {
           console.error('Error!', error.message);
-          alert("Something went wrong. Please try again later.");
+          // Error Feedback
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'bg-red-50 border border-red-200 text-red-800 rounded-xl p-4 mt-4 text-center';
+          errorDiv.innerText = 'Something went wrong. Please try again later.';
+          contactForm.parentNode.insertBefore(errorDiv, contactForm.nextSibling);
         })
         .finally(() => {
           btn.innerText = originalText;
           btn.disabled = false;
+          btn.classList.remove('opacity-75', 'cursor-not-allowed');
         });
     });
   }

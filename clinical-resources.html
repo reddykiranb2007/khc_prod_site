@@ -8,9 +8,9 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS (Animate On Scroll) Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS (Animate On Scroll) Library - Disabled -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
@@ -102,14 +102,14 @@
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 About Kyron
                             </a>
-                            <a href="#"
+                            <!-- <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Manufacturing & Quality
                             </a>
                             <a href="#"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] border-b border-gray-100 last:border-0 transition-colors">
                                 Careers
-                            </a>
+                            </a> -->
                             <a href="contact.html"
                                 class="block px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#008ED6] transition-colors">
                                 Contact
@@ -193,9 +193,9 @@
                         class="hidden flex-col pl-4 mt-1 space-y-2 border-l border-gray-100 transition-all duration-300">
                         <a href="about.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">About
                             Kyron</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
+                        <!-- <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Manufacturing &
                             Quality</a>
-                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a>
+                        <a href="#" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Careers</a> -->
                         <a href="contact.html" class="block py-2 text-sm text-gray-500 hover:text-[#008ED6]">Contact</a>
                     </div>
                 </div>
@@ -206,14 +206,39 @@
     </header>
 
     <!-- SECTION 1: PAGE INTRO -->
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-white relative">
         <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-6">Clinical Resources & Downloads</h1>
-            <p class="text-xl text-gray-600 leading-relaxed font-light">
+            <p class="text-xl text-gray-600 leading-relaxed font-light mb-10">
                 This section provides clinical, technical, and operational resources to support the evaluation,
                 deployment, and
-                use of Kyron respiratory systems in neonatal and critical care environments.
+                use of Kyron respiratory systems.
             </p>
+
+            <!-- Filter Buttons -->
+            <div
+                class="inline-flex flex-wrap justify-center gap-3 bg-gray-50/80 p-2 rounded-xl border border-gray-200 backdrop-blur-sm">
+                <button onclick="filterResources('all')"
+                    class="filter-btn active px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 text-[#0B3C68] hover:bg-white hover:shadow-sm"
+                    data-filter="all">
+                    All Resources
+                </button>
+                <button onclick="filterResources('respiassist')"
+                    class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 text-gray-600 hover:text-[#0B3C68] hover:bg-white hover:shadow-sm"
+                    data-filter="respiassist">
+                    RespiAssist
+                </button>
+                <button onclick="filterResources('humidifiers')"
+                    class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 text-gray-600 hover:text-[#0B3C68] hover:bg-white hover:shadow-sm"
+                    data-filter="humidifiers">
+                    KHC Humidifiers
+                </button>
+                <button onclick="filterResources('regulatory')"
+                    class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 text-gray-600 hover:text-[#0B3C68] hover:bg-white hover:shadow-sm"
+                    data-filter="regulatory">
+                    Regulatory & Quality
+                </button>
+            </div>
         </div>
     </section>
 
@@ -222,15 +247,20 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10">
                 <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">Clinical Documentation</h2>
-                <p class="text-gray-600">Peer-informed and clinically oriented reference material supporting respiratory
-                    therapy
-                    use.</p>
+                <p class="text-gray-600">Peer-informed and clinically oriented reference material.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6 resource-grid">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-category="respiassist">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-blue-50 text-[#008ED6] text-[10px] font-bold uppercase tracking-wider rounded">RespiAssist
+                            Range</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Clinical</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">System Overview & Clinical Indications</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Detailed guide on the intended clinical use, patient selection logic, and system capabilities.
@@ -246,10 +276,16 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Therapy Modes & Clinical Application Guide
-                    </h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100" data-category="respiassist">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-blue-50 text-[#008ED6] text-[10px] font-bold uppercase tracking-wider rounded">RespiAssist
+                            Range</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Clinical</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Therapy Modes Guide</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Operational guide for configuring and optimizing neonatal respiratory support modes.
                     </p>
@@ -264,9 +300,16 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Alarm Logic & Safety Behavior Summary</h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200" data-category="respiassist">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-blue-50 text-[#008ED6] text-[10px] font-bold uppercase tracking-wider rounded">RespiAssist
+                            Range</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Safety</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Alarm Logic & Safety Behavior</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Technical explanation of safety parameters, alarm priorities, and system responses.
                     </p>
@@ -292,10 +335,17 @@
                     understanding.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6 resource-grid">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-category="all-devices">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">All
+                            Devices</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Technical</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Technical Specifications Sheet</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Comprehensive breakdown of system performance, electrical requirements, and physical dimensions.
@@ -311,8 +361,15 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100" data-category="all-devices">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">All
+                            Devices</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Technical</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Installation & Commissioning Guide</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Step-by-step procedures for initial setup, calibration, and operational verification.
@@ -328,9 +385,16 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Preventive Maintenance & Service Manual</h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200" data-category="all-devices">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">All
+                            Devices</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Maintenance</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Preventive Maintenance Manual</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Guidelines for scheduled maintenance, part verification, and service protocols.
                     </p>
@@ -356,11 +420,17 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6 resource-grid">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Quality Management System Overview</h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-category="regulatory">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Corporate</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Regulatory</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Quality Management System</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Outline of Kyron's ISO 13485 aligned quality processes and manufacturing controls.
                     </p>
@@ -375,9 +445,15 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Applicable Standards & Compliance Summary</h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100" data-category="regulatory">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Corporate</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Compliance</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Applicable Standards Summary</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Reference document listing adhered safety (IEC 60601) and performance standards.
                     </p>
@@ -392,9 +468,16 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Risk Management & Usability Overview</h3>
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200" data-category="regulatory">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Corporate</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Risk
+                            Mgmt</span>
+                    </div>
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Risk Management & Usability</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Summary of risk analysis methodologies (ISO 14971) and usability engineering (IEC 62366).
                     </p>
@@ -419,10 +502,17 @@
                 <p class="text-gray-600">Resources to support clinical training and system familiarization.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6 resource-grid">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-category="all-devices">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">All
+                            Devices</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Training</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Clinical Training Presentation</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Slide deck for training clinical staff on system operation and key features.
@@ -438,8 +528,16 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100" data-category="respiassist">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-blue-50 text-[#008ED6] text-[10px] font-bold uppercase tracking-wider rounded">RespiAssist
+                            Range</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Quick
+                            Ref</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Quick Reference Guides</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Printable single-page guides for bedside operation and common adjustments.
@@ -455,8 +553,15 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div class="resource-card bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200" data-category="all-devices">
+                    <div class="flex gap-2 mb-4">
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">All
+                            Devices</span>
+                        <span
+                            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wider rounded">Support</span>
+                    </div>
                     <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Troubleshooting Overview</h3>
                     <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                         Logic flow charts for addressing common alarms and operational queries.
@@ -587,12 +692,63 @@
 </body>
 
 <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
+    // Filter Functionality
+    function filterResources(category) {
+        const cards = document.querySelectorAll('.resource-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        // Update active button state
+        buttons.forEach(btn => {
+            if (btn.getAttribute('data-filter') === category) {
+                btn.classList.add('bg-[#0B3C68]', 'text-white', 'shadow-md');
+                btn.classList.remove('text-gray-600', 'hover:bg-white');
+            } else {
+                btn.classList.remove('active', 'bg-[#0B3C68]', 'text-white', 'shadow-md');
+                btn.classList.add('text-gray-600', 'hover:bg-white');
+            }
+        });
+
+        // Filter cards
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+
+            if (category === 'all') {
+                card.style.display = 'block';
+                card.parentElement.classList.remove('hidden-grid'); // Ensure parent grid is visible (if we were hiding it)
+            } else if (category === 'respiassist') {
+                if (cardCategory === 'respiassist' || cardCategory === 'all-devices') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else if (category === 'humidifiers') {
+                // For humidifiers, we show generic 'all-devices' items as they likely cover humidifiers too, 
+                // unless specified otherwise. We don't have specific humidifier docs yet, so 'all-devices' is the safety net.
+                if (cardCategory === 'humidifiers' || cardCategory === 'all-devices') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else if (category === 'regulatory') {
+                if (cardCategory === 'regulatory') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        // Optional: Hide empty sections if all cards in them are hidden
+        // Not strictly required but good for polish. For now, strict card hiding is sufficient.
+    }
+
+    // Initialize active state for 'All' button on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+        if (allBtn) {
+            allBtn.classList.add('bg-[#0B3C68]', 'text-white', 'shadow-md');
+            allBtn.classList.remove('text-gray-600', 'hover:bg-white');
+        }
     });
 </script>
 <script src="assets/js/mobile-menu.js"></script>
