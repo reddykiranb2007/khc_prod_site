@@ -4,78 +4,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RespiAssist — KHC</title>
+    <title>Service Request — Kyron Healthcare</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS (Animate On Scroll) Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="assets/css/custom.css">
-
     <style>
-        .section {
-            max-width: 80rem;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
+        /* Form specific styles */
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            /* gray-700 */
+            margin-bottom: 0.5rem;
         }
 
-        .headline {
-            font-size: 2.25rem;
-            font-weight: 800;
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            border-radius: 0.5rem;
+            border: 1px solid #D1D5DB;
+            /* gray-300 */
+            padding: 0.625rem 1rem;
+            font-size: 0.95rem;
+            /* slightly larger for legibility */
+            color: #111827;
+            /* gray-900 */
+            background-color: #fff;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #008ED6;
+            box-shadow: 0 0 0 3px rgba(0, 142, 214, 0.1);
+        }
+
+        .form-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid #E5E7EB;
+            /* gray-200 */
+            margin-bottom: 2rem;
+        }
+
+        .form-section-title {
+            font-size: 1.125rem;
+            font-weight: 700;
             color: #0B3C68;
-        }
-
-        @media (min-width: 768px) {
-            .headline {
-                font-size: 2.5rem;
-            }
-        }
-
-        .subtext {
-            color: #4b5563;
-            line-height: 1.7;
-        }
-
-        .btn-primary {
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            background: #008ED6;
-            color: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: 0.15s;
-        }
-
-        .btn-primary:hover {
-            background: #0B3C68;
-        }
-
-        .back-to-products {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            padding: 0.75rem 1.25rem;
-            background: #008ED6;
-            color: white;
-            border-radius: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 142, 214, 0.3);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-            z-index: 40;
-        }
-
-        .back-to-products:hover {
-            background: #0B3C68;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 142, 214, 0.4);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #F3F4F6;
         }
     </style>
 </head>
 
-<body class="bg-[#F3F4F6] text-[#1B2430]">
+<body class="bg-[#F9FAFB] text-[#1B2430] font-sans">
 
     <!-- HEADER -->
     <header class="glass-nav sticky top-0 z-50 transition-all duration-300 shadow-sm">
@@ -95,7 +83,7 @@
                 <!-- Respiratory Systems Dropdown -->
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-[#0B3C68] hover:text-[#008ED6] transition-colors focus:outline-none py-4">
+                        class="flex items-center gap-1 text-gray-600 hover:text-[#008ED6] transition-colors focus:outline-none py-4">
                         Respiratory Systems
                     </button>
                     <div
@@ -128,7 +116,7 @@
                 <!-- Healthcare Professionals Dropdown -->
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-gray-600 hover:text-[#008ED6] transition-colors focus:outline-none py-4">
+                        class="flex items-center gap-1 text-[#0B3C68] hover:text-[#008ED6] transition-colors focus:outline-none py-4">
                         Healthcare Professionals
                     </button>
                     <div
@@ -266,202 +254,222 @@
         </div>
     </header>
 
-    <!-- NOTEBOOK INTERFACE SECTION -->
-    <section class="min-h-screen py-10 md:py-20 flex justify-center items-start">
-        <div class="relative w-full max-w-6xl px-4 flex">
-
-            <!-- MAIN PAGE (Single Page Display) -->
-            <!-- MAIN PAGE (Single Page Display) -->
-            <div
-                class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
-
-                <!-- Content Area -->
-                <div class="flex-1 relative w-full">
-
-                    <!-- ============================================ -->
-                    <!-- HERO SECTION                                 -->
-                    <!-- ============================================ -->
-                    <section class="bg-white">
-                        <div class="section grid md:grid-cols-2 gap-10 items-center !py-12"> <!-- Adjusted padding -->
-
-                            <div data-aos="fade-right">
-                                <h1 class="headline">RespiAssist</h1>
-                                <p class="subtext mt-3">
-                                    Non-invasive ventilation system designed for neonatal and pediatric care.
-                                </p>
-                                <span
-                                    class="inline-block mt-4 text-[10px] text-gray-400 border border-gray-200 px-2 py-0.5 rounded-full tracking-wide">
-                                    Patent-Protected Technology
-                                </span>
-                            </div>
-
-                            <img src="assets/img/respiassist-basic-hero.jpg" class="rounded-2xl shadow-xl animate-float"
-                                alt="RespiAssist NIV System" data-aos="fade-left" loading="lazy">
-                        </div>
-                    </section>
-
-                    <!-- ============================================ -->
-                    <!-- FEATURES SECTION                             -->
-                    <!-- ============================================ -->
-
-                    <section id="features" class="py-10 max-w-7xl mx-auto px-6 space-y-10" data-aos="fade-up">
-                        <div>
-                            <h2 class="text-2xl font-bold mb-2 text-[#0B3C68]">
-                                Key Features
-                            </h2>
-                            <!-- Features Card Grid -->
-                            <div class="grid md:grid-cols-3 gap-6">
-
-                                <!-- Card 1 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Advanced Therapy</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        NIV therapies suitable for neonatal & pediatric patients. Designed specifically
-                                        for critical care in NICU & PICU environments.
-                                    </p>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Precision & Performance</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Features a built-in blower for consistent air supply, delivering precise FiO₂
-                                        and flow control for effective treatment.
-                                    </p>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Smart Interface</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        A compact, easy-to-use platform with a clear integrated display and smart alarms
-                                        featuring audio-visual indicators.
-                                    </p>
-                                </div>
-
-                            </div>
-
-                            <h3 class="mt-10 text-xl font-bold text-[#0B3C68]">
-                                Technical Specifications
-                            </h3>
-
-                            <div class="overflow-x-auto mt-3">
-                                <table class="w-full text-sm border rounded-xl">
-                                    <tbody class="divide-y">
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Display</td>
-                                            <td class="p-3">5-inch touch display</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Therapy Modes</td>
-                                            <td class="p-3">
-                                                nCPAP, Bubble CPAP, HFNC/O₂
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">FiO₂ Range</td>
-                                            <td class="p-3">21 – 100 %</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Flow Range</td>
-                                            <td class="p-3">4 – 25 / 40 LPM</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Pressure (PEEP)</td>
-                                            <td class="p-3">1 – 10 cm H₂O</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Monitoring</td>
-                                            <td class="p-3">
-                                                FiO₂, Flow, Pressure, Alarms
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-3 font-medium">Power</td>
-                                            <td class="p-3">100–265 V AC</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <button onclick="openBrochureModal('assets/brochures/respiassist.pdf')"
-                                class="btn-primary mt-8 inline-block">
-                                View Brochure (PDF)
-                            </button>
-
-                            <div class="mt-8 border-t pt-6">
-                                <a href="products.html"
-                                    class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                    </svg>
-                                    Back to Products
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
+    <!-- SECTION 1: PAGE INTRO -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-[#0B3C68] mb-4">Service Request</h1>
+            <p class="text-lg text-gray-600 leading-relaxed font-light mb-4">
+                This form is intended for hospitals and authorized service partners to report technical issues, request
+                service
+                support, or seek operational assistance for Kyron respiratory systems.
+            </p>
+            <div class="inline-block bg-red-50 border border-red-100 rounded-lg px-4 py-3">
+                <p class="text-sm text-red-700 font-medium">
+                    <strong>Important:</strong> For urgent clinical situations, follow hospital emergency protocols and
+                    contact your local Kyron service representative directly.
+                </p>
             </div>
+        </div>
+    </section>
 
-            <!-- SIDE TABS (Navigation) -->
-            <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
+    <!-- FORM CONTAINER -->
+    <section class="py-12">
+        <div class="max-w-3xl mx-auto px-6">
 
-                <!-- Tab 1: RespiAssist (Active) -->
-                <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
-                        RespiAssist
-                    </span>
-                </a>
+            <form id="serviceForm" class="space-y-6" novalidate>
 
-                <!-- Tab 2: RespiAssist Advance -->
-                <a href="respiassist-advance.html"
-                    class="group relative block h-40 mb-1 bg-[#2C6287] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#0B3C68] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist Advance
-                    </span>
-                </a>
+                <!-- SECTION 2: REQUEST TYPE -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Request Type</h2>
+                    <div>
+                        <label for="requestType" class="form-label">Request Category <span
+                                class="text-red-500">*</span></label>
+                        <select id="requestType" name="requestType" required class="form-select">
+                            <option value="" disabled selected>Select a category...</option>
+                            <option value="preventive_maintenance">Preventive Maintenance</option>
+                            <option value="corrective_service">Corrective Service</option>
+                            <option value="installation">Installation / Commissioning</option>
+                            <option value="software_support">Software / Firmware Support</option>
+                            <option value="technical_query">Technical Query</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
 
-                <!-- Tab 3: KHC 1000 -->
-                <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#5FA8D3] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#0B3C68] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 1000
-                    </span>
-                </a>
+                <!-- SECTION 3: DEVICE INFORMATION -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Device Information</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="productName" class="form-label">Product Name <span
+                                    class="text-red-500">*</span></label>
+                            <select id="productName" name="productName" required class="form-select">
+                                <option value="" disabled selected>Select product...</option>
+                                <option value="respiassist">RespiAssist</option>
+                                <option value="respiassist_advance">RespiAssist Advance</option>
+                                <option value="khc1000">KHC 1000 Humidifier</option>
+                                <option value="khc3000">KHC 3000 Humidifier</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="model" class="form-label">Model / Variant</label>
+                            <input type="text" id="model" name="model" class="form-input"
+                                placeholder="e.g. Basic, Pro, or Ref Code">
+                        </div>
+                        <div>
+                            <label for="serialNumber" class="form-label">Serial Number</label>
+                            <input type="text" id="serialNumber" name="serialNumber" class="form-input"
+                                placeholder="Check rear panel label">
+                            <p class="text-xs text-gray-500 mt-1">Recommended for faster processing.</p>
+                        </div>
+                        <div>
+                            <label for="location" class="form-label">Installation Location <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="location" name="location" required class="form-input"
+                                placeholder="e.g. City Hospital, NICU Ward 3">
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Tab 4: KHC 3000 -->
-                <a href="khc3000.html"
-                    class="group relative block h-28 mb-1 bg-[#8CC5E3] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#0B3C68] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 3000
-                    </span>
-                </a>
+                <!-- SECTION 4: ISSUE DESCRIPTION -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Issue Description</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label for="summary" class="form-label">Short Summary <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="summary" name="summary" required class="form-input"
+                                placeholder="e.g. 'Device showing Error 04 during startup'">
+                        </div>
+                        <div>
+                            <label for="description" class="form-label">Detailed Description <span
+                                    class="text-red-500">*</span></label>
+                            <textarea id="description" name="description" rows="5" required class="form-textarea"
+                                placeholder="Please describe observed behavior, alarms, or operational issues as clearly as possible."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 5: CONTACT INFORMATION -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Contact Information</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label for="hospitalName" class="form-label">Hospital Name <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="hospitalName" name="hospitalName" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="contactName" class="form-label">Contact Person Name <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="contactName" name="contactName" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="role" class="form-label">Role <span class="text-red-500">*</span></label>
+                            <select id="role" name="role" required class="form-select">
+                                <option value="" disabled selected>Select role...</option>
+                                <option value="biomedical">Biomedical Engineer / Technician</option>
+                                <option value="clinician">Clinician / Doctor / Nurse</option>
+                                <option value="administrator">Hospital Administrator</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="phone" class="form-label">Phone Number <span
+                                    class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" name="phone" required class="form-input"
+                                placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div>
+                            <label for="email" class="form-label">Email Address <span
+                                    class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 6: PRIORITY INDICATION -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Priority Level</h2>
+                    <div class="space-y-3">
+                        <label
+                            class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input type="radio" name="priority" value="routine"
+                                class="w-5 h-5 text-[#008ED6] focus:ring-[#008ED6]" required checked>
+                            <div>
+                                <span class="block font-semibold text-gray-800">Routine</span>
+                                <span class="text-sm text-gray-500">Scheduled maintenance or non-urgent query.</span>
+                            </div>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input type="radio" name="priority" value="high"
+                                class="w-5 h-5 text-[#008ED6] focus:ring-[#008ED6]">
+                            <div>
+                                <span class="block font-semibold text-gray-800">High (non-emergency)</span>
+                                <span class="text-sm text-gray-500">Operational reliability affected, but workaround
+                                    available.</span>
+                            </div>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 p-3 border rounded-lg border-red-100 bg-red-50/30 cursor-pointer hover:bg-red-50 transition-colors">
+                            <input type="radio" name="priority" value="critical"
+                                class="w-5 h-5 text-red-600 focus:ring-red-500">
+                            <div>
+                                <span class="block font-semibold text-red-800">Critical</span>
+                                <span class="text-sm text-red-600">Device unusable or clinical safety risk. Requires
+                                    immediate attention.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 italic">
+                        Priority classification assists service routing but does not replace clinical judgment or
+                        emergency protocols.
+                    </p>
+                </div>
+
+                <!-- SECTION 7: SUBMISSION -->
+                <div class="text-center pt-4">
+                    <button type="submit" id="submitBtn"
+                        class="inline-block px-10 py-4 bg-[#008ED6] text-white rounded-xl shadow-lg hover:bg-[#0B3C68] hover:shadow-xl transition-all font-bold text-lg w-full md:w-auto">
+                        Submit Service Request
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="successMessage" class="hidden bg-green-50 border border-green-200 rounded-xl p-8 text-center"
+                role="alert">
+                <div
+                    class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-green-800 mb-2">Service Request Received</h2>
+                <p class="text-green-700">
+                    Our support team will review the information and respond through the registered contact details.
+                </p>
+                <button onclick="window.location.reload()"
+                    class="mt-6 text-green-700 underline text-sm hover:text-green-900">Submit another request</button>
             </div>
 
         </div>
     </section>
 
-    <footer class="bg-[#0B3C68] text-white py-12 mt-10">
+    <!-- SECTION 8: FOOTER NOTE -->
+    <section class="py-10 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-sm text-gray-400">
+                This service request system supports structured issue tracking and service coordination.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0B3C68] text-white py-12">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
             <!-- Column 1: Brand -->
             <div class="space-y-4">
@@ -502,7 +510,7 @@
                         class="text-white hover:text-[#008ED6] transition-colors" title="Instagram">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                     <a href="https://www.linkedin.com/company/kyronhealthcare/" target="_blank"
@@ -550,32 +558,33 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Sticky Button -->
-    <a href="https://wa.me/919315942627" target="_blank"
-        class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center"
-        title="Chat on WhatsApp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.547 1.441 5.563 1.442 5.513 0 10-4.487 10.002-10 0-2.673-1.04-5.186-2.93-7.078-1.89-1.891-4.403-2.933-7.075-2.933-5.513 0-10.002 4.487-10.002 10 0 2.1.547 4.142 1.588 5.946l-1.041 3.805 3.897-1.02zm12.316-10.999c-.3-.15-1.771-.874-2.046-.974-.275-.1-.475-.15-.675.15-.2.3-.775.974-.95 1.174-.175.2-.35.225-.65.075-.3-.15-1.268-.467-2.414-1.49-0.892-.795-1.493-1.777-1.668-2.077-.175-.3-.018-.463.13-.612.134-.133.3-.349.45-.525.151-.175.201-.3.301-.5.1-.2.05-.375-.025-.525s-.675-1.624-.925-2.225c-.244-.582-.49-.503-.675-.512-.175-.008-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.05 1.024-1.05 2.499s1.075 2.9 1.225 3.1c.15.2 2.113 3.227 5.122 4.526 2.502 1.08 3.013.866 3.562.815.549-.051 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.2-.575-.35z" />
-        </svg>
-    </a>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        // Simple Form Handling
+        const form = document.getElementById('serviceForm');
+        const successMessage = document.getElementById('successMessage');
 
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic validation is handled by browser 'required' attributes
+            // Here we simulate a successful submission
+
+            // Disable button
+            const btn = document.getElementById('submitBtn');
+            btn.innerHTML = 'Submitting...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // Simulate network delay
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1000);
+        });
+    </script>
 
 </body>
-
-<script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-    });
-
-
-</script>
-<script src="assets/js/mobile-menu.js"></script>
-<script src="assets/js/brochure-modal.js"></script>
-<script src="assets/js/scroll-top.js"></script>
 
 </html>

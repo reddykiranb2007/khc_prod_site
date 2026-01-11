@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Global function for Mobile Submenu Accordion
+window.toggleMobileSubmenu = function(button) {
+    const content = button.nextElementSibling;
+    if (!content) return;
+    
+    // Toggle hidden/flex classes
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        content.classList.add('flex');
+    } else {
+        content.classList.add('hidden');
+        content.classList.remove('flex');
+    }
+};

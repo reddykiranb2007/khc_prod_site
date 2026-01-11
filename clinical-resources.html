@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KHC 1000 — Humidifier</title>
+    <title>Clinical Resources & Downloads — Kyron Healthcare</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -12,87 +12,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="assets/css/custom.css">
-
-    <style>
-        .section {
-            max-width: 80rem;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        .headline {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: #0B3C68;
-        }
-
-        @media (min-width: 768px) {
-            .headline {
-                font-size: 2.5rem;
-            }
-        }
-
-        .subtext {
-            color: #4b5563;
-            line-height: 1.7;
-        }
-
-        .btn-primary {
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            background: #008ED6;
-            color: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: 0.15s;
-        }
-
-        .btn-primary:hover {
-            background: #0B3C68;
-        }
-
-        .btn-outline {
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            border: 1px solid #0B3C68;
-            color: #0B3C68;
-        }
-
-        .btn-outline:hover {
-            background: #E6F4FF;
-        }
-
-        .hero-overlay {
-            background: linear-gradient(to bottom right,
-                    rgba(0, 26, 58, 0.55),
-                    rgba(0, 142, 214, 0.25));
-        }
-
-        .back-to-products {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            padding: 0.75rem 1.25rem;
-            background: #008ED6;
-            color: white;
-            border-radius: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 142, 214, 0.3);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-            z-index: 40;
-        }
-
-        .back-to-products:hover {
-            background: #0B3C68;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 142, 214, 0.4);
-        }
-    </style>
 </head>
 
-<body class="bg-[#F3F4F6] text-[#1B2430]">
+<body class="bg-white text-[#1B2430] font-sans">
+
     <!-- HEADER -->
     <header class="glass-nav sticky top-0 z-50 transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -111,7 +34,7 @@
                 <!-- Respiratory Systems Dropdown -->
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-[#0B3C68] hover:text-[#008ED6] transition-colors focus:outline-none py-4">
+                        class="flex items-center gap-1 text-gray-600 hover:text-[#008ED6] transition-colors focus:outline-none py-4">
                         Respiratory Systems
                     </button>
                     <div
@@ -144,7 +67,7 @@
                 <!-- Healthcare Professionals Dropdown -->
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-gray-600 hover:text-[#008ED6] transition-colors focus:outline-none py-4">
+                        class="flex items-center gap-1 text-[#0B3C68] hover:text-[#008ED6] transition-colors focus:outline-none py-4">
                         Healthcare Professionals
                     </button>
                     <div
@@ -282,230 +205,286 @@
         </div>
     </header>
 
-    <!-- NOTEBOOK INTERFACE SECTION -->
-    <section class="min-h-screen py-10 md:py-20 flex justify-center items-start">
-        <div class="relative w-full max-w-6xl px-4 flex">
-
-            <!-- MAIN PAGE (Single Page Display) -->
-            <div
-                class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
-
-                <!-- Content Area -->
-                <div class="flex-1 relative w-full">
-
-                    <!-- ============================================ -->
-                    <!-- HERO SECTION                                 -->
-                    <!-- ============================================ -->
-                    <section class="bg-white">
-                        <div class="section grid md:grid-cols-2 gap-10 items-center !py-12"> <!-- Adjusted padding -->
-
-                            <div data-aos="fade-right">
-                                <h1 class="headline">KHC 1000</h1>
-                                <p class="subtext mt-3">
-                                    Reliable respiratory humidifier designed for consistent care.
-                                </p>
-                            </div>
-
-                            <img src="assets/img/khc-1000.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-left" loading="lazy">
-                        </div>
-                    </section>
-
-                    <!-- ============================================ -->
-                    <!-- CONTENT SECTION                              -->
-                    <!-- ============================================ -->
-
-                    <section class="section space-y-12 px-6 md:px-12 py-10">
-
-                        <!-- Key Features Section (Moved Up) -->
-                        <div class="w-full">
-                            <h2 class="text-2xl font-bold mb-6 text-[#0B3C68]">Key Features</h2>
-                            <div class="grid md:grid-cols-3 gap-6">
-                                <!-- Card 1 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Servo-Controlled Heating</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Features full servo-controlled heating to maintain optimal humidity levels
-                                        for diverse therapies.
-                                    </p>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Versatile Modes</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Supports multiple therapy modes, offering flexibility for both invasive and
-                                        non-invasive respiratory support.
-                                    </p>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Clear Monitoring</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Equipped with a bright 7-segment display for easy reading and accurate
-                                        temperature administration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-t border-gray-100 pt-8"></div>
-
-                        <!-- KHC 1000 -->
-                        <div class="grid md:grid-cols-2 gap-10 items-center">
-                            <img src="assets/img/khc1000.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-right" loading="lazy">
-
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0B3C68] mb-3">Respiratory Humidifier</h3>
-
-
-
-                                <h4 class="mt-5 font-semibold">Key Specifications</h4>
-                                <ul class="text-gray-600 text-sm mt-2 space-y-1">
-                                    <li>— Heater plate capacity: 150W (max 115°C)</li>
-                                    <li>— Temperature range: 5 to 70°C (±0.3°C within 25–45°C)</li>
-                                    <li>— Recommended ambient: 18–26°C</li>
-                                </ul>
-
-                                <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
-
-                                <div class="overflow-x-auto mt-3">
-                                    <table class="w-full text-sm border rounded-xl">
-                                        <tbody class="divide-y">
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Dimensions</td>
-                                                <td class="p-3">W135 × D170 × H156 mm</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Weight</td>
-                                                <td class="p-3">2.9 kg (without chamber)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Supply Voltage</td>
-                                                <td class="p-3">220 V, 50/60 Hz</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Current</td>
-                                                <td class="p-3">3 A (max)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Heater Plate Capacity</td>
-                                                <td class="p-3">150 W — up to 115 °C</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Temperature Range</td>
-                                                <td class="p-3">5 – 70 °C (±0.3 °C from 25 – 45 °C)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Flow Range</td>
-                                                <td class="p-3">
-                                                    Invasive: up to 40 L/min<br>
-                                                    Non-invasive: up to 60 L/min
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Warm-up Time</td>
-                                                <td class="p-3">Less than 30 minutes</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Standards</td>
-                                                <td class="p-3">
-                                                    IEC 60601-1, IEC 60601-1-2, ISO 8185
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <button onclick="openBrochureModal('assets/brochures/khc1000.pdf')"
-                                    class="btn-primary mt-6 inline-block">
-                                    View KHC 1000 Brochure
-                                </button>
-
-                                <div class="mt-8 border-t pt-6">
-                                    <a href="products.html"
-                                        class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                        </svg>
-                                        Back to Products
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Key Features Section (Full Width) -->
-
-
-                    </section>
-
-                </div>
-            </div>
-
-            <!-- SIDE TABS (Navigation) -->
-            <!-- SIDE TABS (Navigation) -->
-            <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
-
-                <!-- Tab 1: RespiAssist -->
-                <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist
-                    </span>
-                </a>
-
-                <!-- Tab 2: RespiAssist Advance -->
-                <a href="respiassist-advance.html"
-                    class="group relative block h-40 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist Advance
-                    </span>
-                </a>
-
-                <!-- Tab 3: KHC 1000 (Active) -->
-                <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
-                        KHC 1000
-                    </span>
-                </a>
-
-                <!-- Tab 4: KHC 3000 -->
-                <a href="khc3000.html"
-                    class="group relative block h-28 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 3000
-                    </span>
-                </a>
-            </div>
-
+    <!-- SECTION 1: PAGE INTRO -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-6">Clinical Resources & Downloads</h1>
+            <p class="text-xl text-gray-600 leading-relaxed font-light">
+                This section provides clinical, technical, and operational resources to support the evaluation,
+                deployment, and
+                use of Kyron respiratory systems in neonatal and critical care environments.
+            </p>
         </div>
     </section>
 
+    <!-- SECTION 2: CLINICAL DOCUMENTATION -->
+    <section class="py-16 bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">Clinical Documentation</h2>
+                <p class="text-gray-600">Peer-informed and clinically oriented reference material supporting respiratory
+                    therapy
+                    use.</p>
+            </div>
 
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">System Overview & Clinical Indications</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Detailed guide on the intended clinical use, patient selection logic, and system capabilities.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
 
-    <footer class="bg-[#0B3C68] text-white py-12 mt-10">
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Therapy Modes & Clinical Application Guide
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Operational guide for configuring and optimizing neonatal respiratory support modes.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Alarm Logic & Safety Behavior Summary</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Technical explanation of safety parameters, alarm priorities, and system responses.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TECHNICAL & BIOMEDICAL RESOURCES -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">Technical & Biomedical Resources</h2>
+                <p class="text-gray-600">Technical documentation supporting installation, maintenance, and system
+                    understanding.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Technical Specifications Sheet</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Comprehensive breakdown of system performance, electrical requirements, and physical dimensions.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Installation & Commissioning Guide</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Step-by-step procedures for initial setup, calibration, and operational verification.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Preventive Maintenance & Service Manual</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Guidelines for scheduled maintenance, part verification, and service protocols.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: REGULATORY & QUALITY INFORMATION -->
+    <section class="py-16 bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">Regulatory & Quality Information</h2>
+                <p class="text-gray-600">Information related to quality systems, compliance, and validation practices.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Quality Management System Overview</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Outline of Kyron's ISO 13485 aligned quality processes and manufacturing controls.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Applicable Standards & Compliance Summary</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Reference document listing adhered safety (IEC 60601) and performance standards.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Risk Management & Usability Overview</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Summary of risk analysis methodologies (ISO 14971) and usability engineering (IEC 62366).
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: TRAINING & EDUCATIONAL MATERIAL -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-[#0B3C68] mb-2">Training & Educational Material</h2>
+                <p class="text-gray-600">Resources to support clinical training and system familiarization.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Clinical Training Presentation</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Slide deck for training clinical staff on system operation and key features.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Quick Reference Guides</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Printable single-page guides for bedside operation and common adjustments.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-[#0B3C68] mb-3 text-lg">Troubleshooting Overview</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        Logic flow charts for addressing common alarms and operational queries.
+                    </p>
+                    <a href="#"
+                        class="text-[#008ED6] font-medium text-sm hover:underline inline-flex items-center gap-2">
+                        Download (PDF)
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ACCESS NOTE -->
+    <section class="py-12 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-sm text-gray-500">
+                Some resources may be available upon request to ensure appropriate clinical use and version control.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0B3C68] text-white py-12">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
             <!-- Column 1: Brand -->
             <div class="space-y-4">
@@ -546,7 +525,7 @@
                         class="text-white hover:text-[#008ED6] transition-colors" title="Instagram">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                     <a href="https://www.linkedin.com/company/kyronhealthcare/" target="_blank"
@@ -559,7 +538,7 @@
                 </div>
             </div>
 
-            <!-- Column 4: Contact Details -->
+            <!-- Column 3: Contact Details -->
             <div class="space-y-4">
                 <h4 class="font-semibold text-xl">Contact Us</h4>
                 <ul class="space-y-4 text-sm">
@@ -617,7 +596,5 @@
     });
 </script>
 <script src="assets/js/mobile-menu.js"></script>
-<script src="assets/js/brochure-modal.js"></script>
-<script src="assets/js/scroll-top.js"></script>
 
 </html>

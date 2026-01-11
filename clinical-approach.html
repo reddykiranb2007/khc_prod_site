@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KHC 1000 — Humidifier</title>
+    <title>Clinical Approach — Kyron Healthcare</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -12,87 +12,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="assets/css/custom.css">
-
-    <style>
-        .section {
-            max-width: 80rem;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        .headline {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: #0B3C68;
-        }
-
-        @media (min-width: 768px) {
-            .headline {
-                font-size: 2.5rem;
-            }
-        }
-
-        .subtext {
-            color: #4b5563;
-            line-height: 1.7;
-        }
-
-        .btn-primary {
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            background: #008ED6;
-            color: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: 0.15s;
-        }
-
-        .btn-primary:hover {
-            background: #0B3C68;
-        }
-
-        .btn-outline {
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            border: 1px solid #0B3C68;
-            color: #0B3C68;
-        }
-
-        .btn-outline:hover {
-            background: #E6F4FF;
-        }
-
-        .hero-overlay {
-            background: linear-gradient(to bottom right,
-                    rgba(0, 26, 58, 0.55),
-                    rgba(0, 142, 214, 0.25));
-        }
-
-        .back-to-products {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            padding: 0.75rem 1.25rem;
-            background: #008ED6;
-            color: white;
-            border-radius: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 142, 214, 0.3);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-            z-index: 40;
-        }
-
-        .back-to-products:hover {
-            background: #0B3C68;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 142, 214, 0.4);
-        }
-    </style>
 </head>
 
-<body class="bg-[#F3F4F6] text-[#1B2430]">
+<body class="bg-white text-[#1B2430] font-sans">
+
     <!-- HEADER -->
     <header class="glass-nav sticky top-0 z-50 transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -111,7 +34,7 @@
                 <!-- Respiratory Systems Dropdown -->
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-[#0B3C68] hover:text-[#008ED6] transition-colors focus:outline-none py-4">
+                        class="flex items-center gap-1 text-gray-600 hover:text-[#008ED6] transition-colors focus:outline-none py-4">
                         Respiratory Systems
                     </button>
                     <div
@@ -138,7 +61,7 @@
                     </div>
                 </div>
 
-                <a href="clinical-approach.html" class="text-gray-600 hover:text-[#008ED6] transition-colors">Clinical
+                <a href="clinical-approach.html" class="text-[#0B3C68] hover:text-[#008ED6] transition-colors">Clinical
                     Approach</a>
 
                 <!-- Healthcare Professionals Dropdown -->
@@ -237,7 +160,8 @@
                     </div>
                 </div>
 
-                <a href="clinical-approach.html" class="hover:text-[#008ED6]">Clinical Approach</a>
+                <a href="clinical-approach.html" class="text-[#0B3C68] font-semibold hover:text-[#008ED6]">Clinical
+                    Approach</a>
 
                 <!-- Healthcare Professionals Accordion -->
                 <div class="flex flex-col">
@@ -282,230 +206,204 @@
         </div>
     </header>
 
-    <!-- NOTEBOOK INTERFACE SECTION -->
-    <section class="min-h-screen py-10 md:py-20 flex justify-center items-start">
-        <div class="relative w-full max-w-6xl px-4 flex">
-
-            <!-- MAIN PAGE (Single Page Display) -->
-            <div
-                class="flex-1 bg-white relative z-20 min-h-[600px] flex flex-col md:flex-row overflow-hidden shadow-sm rounded-xl">
-
-                <!-- Content Area -->
-                <div class="flex-1 relative w-full">
-
-                    <!-- ============================================ -->
-                    <!-- HERO SECTION                                 -->
-                    <!-- ============================================ -->
-                    <section class="bg-white">
-                        <div class="section grid md:grid-cols-2 gap-10 items-center !py-12"> <!-- Adjusted padding -->
-
-                            <div data-aos="fade-right">
-                                <h1 class="headline">KHC 1000</h1>
-                                <p class="subtext mt-3">
-                                    Reliable respiratory humidifier designed for consistent care.
-                                </p>
-                            </div>
-
-                            <img src="assets/img/khc-1000.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-left" loading="lazy">
-                        </div>
-                    </section>
-
-                    <!-- ============================================ -->
-                    <!-- CONTENT SECTION                              -->
-                    <!-- ============================================ -->
-
-                    <section class="section space-y-12 px-6 md:px-12 py-10">
-
-                        <!-- Key Features Section (Moved Up) -->
-                        <div class="w-full">
-                            <h2 class="text-2xl font-bold mb-6 text-[#0B3C68]">Key Features</h2>
-                            <div class="grid md:grid-cols-3 gap-6">
-                                <!-- Card 1 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Servo-Controlled Heating</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Features full servo-controlled heating to maintain optimal humidity levels
-                                        for diverse therapies.
-                                    </p>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Versatile Modes</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Supports multiple therapy modes, offering flexibility for both invasive and
-                                        non-invasive respiratory support.
-                                    </p>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div
-                                    class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-shadow h-full">
-                                    <h3 class="text-[#0B3C68] font-bold mb-3 text-lg">Clear Monitoring</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        Equipped with a bright 7-segment display for easy reading and accurate
-                                        temperature administration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-t border-gray-100 pt-8"></div>
-
-                        <!-- KHC 1000 -->
-                        <div class="grid md:grid-cols-2 gap-10 items-center">
-                            <img src="assets/img/khc1000.png" class="rounded-2xl shadow-xl animate-float"
-                                alt="KHC 1000 Respiratory Humidifier" data-aos="fade-right" loading="lazy">
-
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0B3C68] mb-3">Respiratory Humidifier</h3>
-
-
-
-                                <h4 class="mt-5 font-semibold">Key Specifications</h4>
-                                <ul class="text-gray-600 text-sm mt-2 space-y-1">
-                                    <li>— Heater plate capacity: 150W (max 115°C)</li>
-                                    <li>— Temperature range: 5 to 70°C (±0.3°C within 25–45°C)</li>
-                                    <li>— Recommended ambient: 18–26°C</li>
-                                </ul>
-
-                                <h4 class="mt-6 font-semibold text-[#0B3C68]">Technical Specifications</h4>
-
-                                <div class="overflow-x-auto mt-3">
-                                    <table class="w-full text-sm border rounded-xl">
-                                        <tbody class="divide-y">
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Dimensions</td>
-                                                <td class="p-3">W135 × D170 × H156 mm</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Weight</td>
-                                                <td class="p-3">2.9 kg (without chamber)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Supply Voltage</td>
-                                                <td class="p-3">220 V, 50/60 Hz</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Current</td>
-                                                <td class="p-3">3 A (max)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Heater Plate Capacity</td>
-                                                <td class="p-3">150 W — up to 115 °C</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Temperature Range</td>
-                                                <td class="p-3">5 – 70 °C (±0.3 °C from 25 – 45 °C)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Flow Range</td>
-                                                <td class="p-3">
-                                                    Invasive: up to 40 L/min<br>
-                                                    Non-invasive: up to 60 L/min
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Warm-up Time</td>
-                                                <td class="p-3">Less than 30 minutes</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="p-3 font-medium">Standards</td>
-                                                <td class="p-3">
-                                                    IEC 60601-1, IEC 60601-1-2, ISO 8185
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <button onclick="openBrochureModal('assets/brochures/khc1000.pdf')"
-                                    class="btn-primary mt-6 inline-block">
-                                    View KHC 1000 Brochure
-                                </button>
-
-                                <div class="mt-8 border-t pt-6">
-                                    <a href="products.html"
-                                        class="inline-flex items-center gap-2 text-[#008ED6] font-semibold hover:text-[#0B3C68] transition-colors group">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5 transform group-hover:-translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                        </svg>
-                                        Back to Products
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Key Features Section (Full Width) -->
-
-
-                    </section>
-
-                </div>
-            </div>
-
-            <!-- SIDE TABS (Navigation) -->
-            <!-- SIDE TABS (Navigation) -->
-            <div class="fixed right-0 top-32 z-50 hidden md:flex flex-col">
-
-                <!-- Tab 1: RespiAssist -->
-                <a href="respiassist.html"
-                    class="group relative block h-32 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist
-                    </span>
-                </a>
-
-                <!-- Tab 2: RespiAssist Advance -->
-                <a href="respiassist-advance.html"
-                    class="group relative block h-40 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        RespiAssist Advance
-                    </span>
-                </a>
-
-                <!-- Tab 3: KHC 1000 (Active) -->
-                <a href="khc1000.html"
-                    class="group relative block h-28 mb-1 bg-[#0B3C68] w-16 md:w-20 rounded-r-xl shadow-lg transition-all duration-300">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm">
-                        KHC 1000
-                    </span>
-                </a>
-
-                <!-- Tab 4: KHC 3000 -->
-                <a href="khc3000.html"
-                    class="group relative block h-28 mb-1 bg-[#008ED6] rounded-r-xl shadow-md transition-all duration-300 hover:bg-[#FF6B35] hover:w-16 md:hover:w-20 hover:shadow-lg">
-                    <span
-                        class="absolute inset-0 flex items-center justify-center vertical-text text-white font-bold tracking-wider text-xs md:text-sm group-hover:text-white/90">
-                        KHC 3000
-                    </span>
-                </a>
-            </div>
-
+    <!-- SECTION 1: PAGE INTRO -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-6">Clinical Approach</h1>
+            <p class="text-xl text-gray-600 leading-relaxed font-light">
+                Kyron Healthcare develops respiratory systems through a clinically grounded, system-level engineering
+                approach.
+                Every design decision is guided by safety, usability, and real-world deployment conditions.
+            </p>
         </div>
     </section>
 
+    <!-- SECTION 2: DESIGN PHILOSOPHY -->
+    <section class="py-20 bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-[#0B3C68] mb-12 border-b border-gray-200 pb-4">Design Philosophy</h2>
 
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+                <div data-aos="fade-right">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Respiratory care environments vary widely in infrastructure, staff availability, and patient
+                        acuity.
+                        Kyron systems are designed to remain reliable and predictable across these variations.
+                    </p>
+                </div>
 
-    <footer class="bg-[#0B3C68] text-white py-12 mt-10">
+                <div data-aos="fade-left">
+                    <h3 class="text-lg font-semibold text-[#0B3C68] mb-4">We prioritize:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="h-px w-6 bg-[#0B3C68] mt-3"></span>
+                            <span class="text-gray-700 text-lg">System-level integration over isolated features</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="h-px w-6 bg-[#0B3C68] mt-3"></span>
+                            <span class="text-gray-700 text-lg">Predictable performance over specification
+                                inflation</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="h-px w-6 bg-[#0B3C68] mt-3"></span>
+                            <span class="text-gray-700 text-lg">Ease of clinical adoption over complexity</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CLINICAL USABILITY & SAFETY -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-[#0B3C68] mb-12 border-b border-gray-200 pb-4">Clinical Usability &
+                Safety</h2>
+
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <p class="text-xl text-gray-700 leading-relaxed font-light mb-8">
+                        Usability and safety are integral to Kyron’s engineering process.
+                        Interfaces, alarms, and workflows are evaluated to reduce cognitive load and support consistent
+                        clinical
+                        decision-making.
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="border-l-2 border-[#008ED6] pl-6">
+                        <h4 class="font-semibold text-[#0B3C68] mb-2">Clear Parameters</h4>
+                        <p class="text-gray-600 text-sm">Parameters are designed to be explicitly interpretable at a
+                            glance.</p>
+                    </div>
+                    <div class="border-l-2 border-[#008ED6] pl-6">
+                        <h4 class="font-semibold text-[#0B3C68] mb-2">Smart Alarms</h4>
+                        <p class="text-gray-600 text-sm">Consistent alarm behavior prioritizes actionable alerts.</p>
+                    </div>
+                    <div class="border-l-2 border-[#008ED6] pl-6">
+                        <h4 class="font-semibold text-[#0B3C68] mb-2">Reduced Variability</h4>
+                        <p class="text-gray-600 text-sm">Setup and operation are standardized to minimize user error.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-[#008ED6] pl-6">
+                        <h4 class="font-semibold text-[#0B3C68] mb-2">Workflow Integration</h4>
+                        <p class="text-gray-600 text-sm">Designed for seamless compatibility with current NICU & ICU
+                            protocols.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: VALIDATION & QUALITY -->
+    <section class="py-20 bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-[#0B3C68] mb-12 border-b border-gray-200 pb-4">Validation & Quality</h2>
+
+            <div class="max-w-4xl" data-aos="fade-up">
+                <p class="text-lg text-gray-700 leading-relaxed mb-10">
+                    Kyron respiratory systems are developed and validated in alignment with applicable medical device
+                    quality and
+                    safety standards.
+                </p>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-semibold text-[#0B3C68] mb-6">Validation Activities</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <span class="w-1.5 h-1.5 bg-[#008ED6] rounded-full"></span>
+                            <span>Bench testing and functional verification</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <span class="w-1.5 h-1.5 bg-[#008ED6] rounded-full"></span>
+                            <span>Electrical and mechanical safety evaluation</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <span class="w-1.5 h-1.5 bg-[#008ED6] rounded-full"></span>
+                            <span>Usability validation</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <span class="w-1.5 h-1.5 bg-[#008ED6] rounded-full"></span>
+                            <span>Controlled field deployment feedback</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: DEPLOYMENT & SUPPORT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-[#0B3C68] mb-12 border-b border-gray-200 pb-4">Deployment & Lifecycle
+                Support</h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Clinical outcomes depend not only on device design, but on long-term reliability and support.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-[#F7F9FC] p-6 rounded-lg">
+                            <h4 class="font-semibold text-[#0B3C68] mb-1">Structured Installation</h4>
+                            <p class="text-sm text-gray-600">Comprehensive commissioning protocols ensures systems are
+                                patient-ready from day one.</p>
+                        </div>
+                        <div class="bg-[#F7F9FC] p-6 rounded-lg">
+                            <h4 class="font-semibold text-[#0B3C68] mb-1">Clinical & Technical Training</h4>
+                            <p class="text-sm text-gray-600">On-site training empowers staff to utilize the full
+                                capability of the system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pl-0 md:pl-10 space-y-6" data-aos="fade-left">
+                    <div class="bg-[#F7F9FC] p-6 rounded-lg">
+                        <h4 class="font-semibold text-[#0B3C68] mb-1">Preventive Maintenance</h4>
+                        <p class="text-sm text-gray-600">Scheduled maintenance programs designed to maximize uptime and
+                            longevity.</p>
+                    </div>
+                    <div class="bg-[#F7F9FC] p-6 rounded-lg">
+                        <h4 class="font-semibold text-[#0B3C68] mb-1">Responsive Infrastructure</h4>
+                        <p class="text-sm text-gray-600">Service support structured to match the urgency of critical
+                            care environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CLOSING STATEMENT -->
+    <section class="py-32 bg-[#E6F4FF]">
+        <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-in">
+            <p class="text-2xl md:text-3xl text-[#0B3C68] font-bold leading-relaxed mb-6">
+                Kyron Healthcare focuses on building respiratory systems that clinicians can rely on — not just devices
+                with
+                advanced specifications.
+            </p>
+            <p class="text-lg text-gray-500 font-normal">
+                Clinical performance is sustained through engineering discipline, not feature accumulation.
+            </p>
+        </div>
+    </section>
+
+    <!-- RELATED CLINICAL RESOURCES -->
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Related Clinical Resources</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-8 text-base">
+                <a href="clinical-resources.html" class="text-gray-600 hover:underline">
+                    Clinical Resources & Downloads
+                </a>
+                <a href="support-amc.html" class="text-gray-600 hover:underline">
+                    Support & AMC
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0B3C68] text-white py-12">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
             <!-- Column 1: Brand -->
             <div class="space-y-4">
@@ -559,7 +457,7 @@
                 </div>
             </div>
 
-            <!-- Column 4: Contact Details -->
+            <!-- Column 3: Contact Details -->
             <div class="space-y-4">
                 <h4 class="font-semibold text-xl">Contact Us</h4>
                 <ul class="space-y-4 text-sm">
@@ -617,7 +515,5 @@
     });
 </script>
 <script src="assets/js/mobile-menu.js"></script>
-<script src="assets/js/brochure-modal.js"></script>
-<script src="assets/js/scroll-top.js"></script>
 
 </html>
