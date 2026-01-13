@@ -142,6 +142,19 @@
     if (!url) return;
     currentPdfUrl = url;
 
+    // Mobile Handling: Iframe PDF viewing often forces download on mobile, bypassing lead gen.
+    // We enforce the form first on mobile devices.
+    if (window.innerWidth < 1024) {
+      if (typeof window.openBrochureModal === 'function') {
+        window.openBrochureModal(url);
+      } else {
+        const link = document.createElement('a');
+        link.href = url;
+        link.click();
+      }
+      return;
+    }
+
     // Set iframe src with parameters to hide native toolbar
     iframe.src = url + '#toolbar=0&navpanes=0&scrollbar=0';
 
