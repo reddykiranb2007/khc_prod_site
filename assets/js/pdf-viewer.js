@@ -144,7 +144,7 @@
 
     // Mobile Handling: Iframe PDF viewing often forces download on mobile, bypassing lead gen.
     // We enforce the form first on mobile devices.
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 768) {
       if (typeof window.openBrochureModal === 'function') {
         window.openBrochureModal(url);
       } else {
