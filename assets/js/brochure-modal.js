@@ -159,6 +159,8 @@
     targetUrl = url;
 
     // Check if previously submitted
+    // Check if previously submitted (DISABLED FOR TESTING to ensure form always appears)
+    /* 
     if (localStorage.getItem('khc_brochure_submitted') === 'true') {
       const link = document.createElement('a');
       link.href = targetUrl;
@@ -168,6 +170,7 @@
       document.body.removeChild(link);
       return;
     }
+    */
 
     modal.style.display = 'flex';
     // Focus first input
