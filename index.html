@@ -575,10 +575,21 @@
 
   <!-- Lightbox Overlay (Kept from original) -->
   <div id="lightbox"
-    class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300"
+    class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md"
     onclick="closeLightbox()">
-    <button class="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Back Button (Mobile Focused) -->
+    <button
+      class="absolute top-6 left-6 flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-all focus:outline-none"
+      onclick="closeLightbox()">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      <span class="text-sm font-bold uppercase tracking-wider">Back</span>
+    </button>
+
+    <!-- Close Button (Standard) -->
+    <button class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>

@@ -2,42 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Clients & Gallery | Trusted Hospitals & Conferences</title>
-  <meta name="description" content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
-  <link rel="canonical" href="https://www.kyronhealthcare.com/clients-gallery.html" />
+    <title>Clients & Gallery | Trusted Hospitals & Conferences</title>
+    <meta name="description"
+        content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
+    <link rel="canonical" href="https://www.kyronhealthcare.com/clients-gallery.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.kyronhealthcare.com/clients-gallery.html">
-  <meta property="og:title" content="Clients & Gallery | Trusted Hospitals & Conferences">
-  <meta property="og:description" content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
-  <meta property="og:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kyronhealthcare.com/clients-gallery.html">
+    <meta property="og:title" content="Clients & Gallery | Trusted Hospitals & Conferences">
+    <meta property="og:description"
+        content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
+    <meta property="og:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Clients & Gallery | Trusted Hospitals & Conferences">
-  <meta property="twitter:description" content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
-  <meta property="twitter:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Clients & Gallery | Trusted Hospitals & Conferences">
+    <meta property="twitter:description"
+        content="See Kyron Healthcare in action. Trusted by leading hospitals across India and showcased at premier healthcare conferences and CMEs.">
+    <meta property="twitter:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-  <!-- Swiper CSS (Available if needed) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS (Available if needed) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <style>
+    <style>
         /* Gallery Specific Styles */
         .gallery-img {
             transition: all 0.3s ease;
@@ -301,13 +304,26 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[9999] bg-black bg-opacity-95 flex items-center justify-center p-4">
-        <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-[#FF6B35] transition-colors">
+    <div id="lightbox"
+        class="fixed inset-0 z-[9999] bg-black bg-opacity-95 flex items-center justify-center p-4 backdrop-blur-md"
+        onclick="if(event.target === this) closeLightbox()">
+        <!-- Back Button (Mobile Focused) -->
+        <button
+            class="absolute top-6 left-6 flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-all focus:outline-none"
+            onclick="closeLightbox()">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <span class="text-sm font-bold uppercase tracking-wider">Back</span>
+        </button>
+
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+            onclick="closeLightbox()">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
-        <img id="lightbox-img" src="" alt="Gallery Image" class="max-h-[90vh] max-w-full rounded shadow-2xl">
+        <img id="lightbox-img" src="" alt="Gallery Image" class="max-h-[85vh] max-w-full rounded-lg shadow-2xl">
     </div>
 
     <!-- Scripts -->
