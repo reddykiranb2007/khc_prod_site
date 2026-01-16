@@ -2,13 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service Request � Kyron Healthcare</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <style>
+  <title>Service Request | Report Issue - Kyron Healthcare</title>
+  <meta name="description" content="Submit a service request or report a breakdown. Our technical team is ready to support your hospital's equipment needs.">
+  <link rel="canonical" href="https://www.kyronhealthcare.com/service-request.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kyronhealthcare.com/service-request.html">
+  <meta property="og:title" content="Service Request | Report Issue - Kyron Healthcare">
+  <meta property="og:description" content="Submit a service request or report a breakdown. Our technical team is ready to support your hospital's equipment needs.">
+  <meta property="og:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Service Request | Report Issue - Kyron Healthcare">
+  <meta property="twitter:description" content="Submit a service request or report a breakdown. Our technical team is ready to support your hospital's equipment needs.">
+  <meta property="twitter:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Swiper CSS (Available if needed) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
         /* Form specific styles */
         .form-label {
             display: block;
@@ -438,7 +467,7 @@
         </div>
 
         <div class="pt-8 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-xs text-blue-300">© 2025 Kyron Healthcare. All rights reserved.</p>
+            <p class="text-xs text-blue-300">Â© 2025 Kyron Healthcare. All rights reserved.</p>
             <p class="text-xs text-blue-300">Designed for Clinical Reality.</p>
         </div>
     </div>
@@ -526,24 +555,36 @@
                     return;
                 }
 
-                // Simulate Submission
+                                // Real Submission (Deepseek Fix)
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxoW8fkdZYxKYMPjTtfpvG7C_8AE7jI0NcT5rAOAWecTE-TglNd3YJ6bVhzGn5FNRQ7HQ/exec';
                 const btn = document.getElementById('submitBtn');
                 const originalText = btn.innerHTML;
+                
                 btn.innerHTML = 'Submitting...';
                 btn.disabled = true;
                 btn.classList.add('opacity-75', 'cursor-not-allowed');
 
-                // Simulate network delay
-                setTimeout(() => {
-                    form.style.display = 'none';
-                    successMessage.classList.remove('hidden');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                const formData = new FormData(form);
+                formData.append('timestamp', new Date().toString());
+                formData.append('source', 'Service Request Page');
 
-                    // Reset button state incase user reloads or goes back
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                    btn.classList.remove('opacity-75', 'cursor-not-allowed');
-                }, 1000);
+                fetch(SCRIPT_URL, { method: 'POST', body: formData })
+                    .then(response => {
+                        form.style.display = 'none';
+                        if(successMessage) successMessage.classList.remove('hidden');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        alert('Something went wrong. Please try again or contact us directly.');
+                    })
+                    .finally(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    });
+
             });
         }
     </script>
