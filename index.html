@@ -84,7 +84,7 @@
 <body class="antialiased bg-white text-gray-800">
 
   <!-- HEADER -->
-  <header class="glass-nav sticky top-0 z-50 transition-all duration-300">
+  <header class="glass-nav sticky top-0 z-[200] transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3 group">
@@ -145,7 +145,7 @@
         </a>
 
         <!-- Mobile Toggle -->
-        <button id="menu-toggle" class="md:hidden z-50 flex flex-col justify-center gap-1.5 p-2 w-10 h-10">
+        <button id="menu-toggle" class="md:hidden z-[201] flex flex-col justify-center gap-1.5 p-2 w-10 h-10">
           <span class="w-full h-0.5 bg-[#0B3C68] transition-all duration-300"></span>
           <span class="w-full h-0.5 bg-[#0B3C68] transition-all duration-300"></span>
           <span class="w-full h-0.5 bg-[#0B3C68] transition-all duration-300"></span>
@@ -155,8 +155,9 @@
   </header>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="md:hidden">
-    <nav class="flex flex-col gap-4">
+  <div id="mobile-menu"
+    class="md:hidden fixed inset-0 z-[190] bg-white pt-24 px-6 pb-6 transform -translate-y-full transition-transform duration-300">
+    <nav class="flex flex-col gap-4 h-full overflow-y-auto">
       <a href="index.html" class="text-lg font-medium text-[#0B3C68]">Home</a>
 
       <!-- Products Mobile -->
@@ -197,7 +198,7 @@
     <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div class="max-w-xl">
         <!-- Contrast Fix: Text Box -->
-        <div class="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/50">
+        <div class="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl border border-white/50">
           <span
             class="inline-block py-1 px-3 rounded-full bg-blue-50 text-[#006B8F] text-xs font-bold tracking-widest uppercase mb-4 border border-blue-100">
             Advanced Neonatal Care
@@ -633,7 +634,7 @@
 
   <!-- WhatsApp Sticky Button -->
   <a href="https://wa.me/919315942627" target="_blank"
-    class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center transform hover:-translate-y-1">
+    class="fixed bottom-6 right-6 z-[50] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center transform hover:-translate-y-1">
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path
         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.547 1.441 5.563 1.442 5.513 0 10-4.487 10.002-10 0-2.673-1.04-5.186-2.93-7.078-1.89-1.891-4.403-2.933-7.075-2.933-5.513 0-10.002 4.487-10.002 10 0 2.1.547 4.142 1.588 5.946l-1.041 3.805 3.897-1.02zm12.316-10.999c-.3-.15-1.771-.874-2.046-.974-.275-.1-.475-.15-.675.15-.2.3-.775.974-.95 1.174-.175.2-.35.225-.65.075-.3-.15-1.268-.467-2.414-1.49-0.892-.795-1.493-1.777-1.668-2.077-.175-.3-.018-.463.13-.612.134-.133.3-.349.45-.525.151-.175.201-.3.301-.5.1-.2.05-.375-.025-.525s-.675-1.624-.925-2.225c-.244-.582-.49-.503-.675-.512-.175-.008-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.05 1.024-1.05 2.499s1.075 2.9 1.225 3.1c.15.2 2.113 3.227 5.122 4.526 2.502 1.08 3.013.866 3.562.815.549-.051 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.2-.575-.35z" />
