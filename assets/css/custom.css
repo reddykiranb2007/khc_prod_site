@@ -3,19 +3,26 @@
 /* ===== Design System Variables ===== */
 :root {
   /* Color Palette - Premium Clinical */
-  --color-primary: #0B3C68; /* Deep Royal Blue */
-  --color-secondary: #008ED6; /* Clinical Blue */
-  --color-accent: #FF6B35; /* Warm CTA (Use sparingly) */
+  --color-primary: #0B3C68;
+  /* Deep Royal Blue */
+  --color-secondary: #008ED6;
+  /* Clinical Blue */
+  --color-accent: #FF6B35;
+  /* Warm CTA (Use sparingly) */
   --color-accent-hover: #E55A2B;
-  
+
   --color-bg-body: #FFFFFF;
-  --color-bg-light: #F8FAFC; /* Very subtle cool gray */
+  --color-bg-light: #F8FAFC;
+  /* Very subtle cool gray */
   --color-bg-subtle: #F3F6F9;
-  
-  --color-text-primary: #1B2430; /* Near Black */
-  --color-text-secondary: #4B5563; /* Dark Gray */
-  --color-text-tertiary: #9CA3AF; /* Light Gray */
-  
+
+  --color-text-primary: #1B2430;
+  /* Near Black */
+  --color-text-secondary: #4B5563;
+  /* Dark Gray */
+  --color-text-tertiary: #9CA3AF;
+  /* Light Gray */
+
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -23,14 +30,16 @@
 
   /* Typography */
   --font-family-base: 'Inter', sans-serif;
-  --font-size-base: 16px; /* Standardize base size */
+  --font-size-base: 16px;
+  /* Standardize base size */
   --line-height-base: 1.6;
   --line-height-relaxed: 1.8;
 
   /* Spacing */
-  --section-padding-y: 6rem; /* More whitespace */
+  --section-padding-y: 6rem;
+  /* More whitespace */
   --section-padding-y-sm: 4rem;
-  
+
   /* Transitions */
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -46,7 +55,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1.2;
@@ -58,7 +72,9 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  h1 { font-size: 3.5rem; }
+  h1 {
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
@@ -96,7 +112,8 @@ section {
   align-items: center;
   justify-content: center;
   padding: 0.875rem 2rem;
-  border-radius: 0.5rem; /* Clean rounded, not pill */
+  border-radius: 0.5rem;
+  /* Clean rounded, not pill */
   font-weight: 600;
   font-size: 0.95rem;
   transition: var(--transition-base);
@@ -131,7 +148,8 @@ section {
 }
 
 .btn-cta {
-  background-color: var(--color-accent); /* Orange mostly for conversions */
+  background-color: var(--color-accent);
+  /* Orange mostly for conversions */
   color: white;
   box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
 }
@@ -203,7 +221,8 @@ nav a {
   transition: color 0.2s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: var(--color-primary);
 }
 
@@ -246,7 +265,7 @@ nav a:hover, nav a.active {
 /* Mobile Menu */
 #mobile-menu {
   position: fixed;
-  top: 70px; 
+  top: 70px;
   left: 0;
   width: 100%;
   height: auto;
@@ -270,4 +289,27 @@ nav a:hover, nav a.active {
 /* Accordion */
 .accordion-content {
   transition: max-height 0.3s ease-out;
+}
+
+/* ===== Flip Card Utilities (3D Transform) ===== */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Enable group hover for rotation */
+.group:hover .group-hover\:rotate-y-180 {
+  transform: rotateY(180deg);
 }
