@@ -1,20 +1,38 @@
 // gallery-loader.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Dynamically load gallery-data.js with cache busting
-    const script = document.createElement('script');
-    script.src = 'assets/js/gallery-data.js?v=' + new Date().getTime();
-    script.onload = () => {
-        if (window.galleryData) {
-            initGallery(window.galleryData);
-        } else {
-            console.warn('Gallery Data loaded but window.galleryData is undefined.');
-        }
-    };
-    script.onerror = () => {
-        console.error('Failed to load gallery-data.js');
-    };
-    document.body.appendChild(script);
+    // Strategy: Try to fetch dynamic data from PHP (Server-side)
+    // If that fails (e.g. local file system or no PHP), fallback to static JS file
+
+    fetch('assets/get_gallery_images.php')
+        .then(response => {
+            if (!response.ok) throw new Error('PHP script not found or error');
+            return response.json();
+        })
+        .then(data => {
+            console.log('Gallery loaded via PHP Auto-Discovery');
+            initGallery(data);
+        })
+        .catch(err => {
+            console.warn('PHP Auto-Discovery failed (likely local env), falling back to static data.', err);
+            loadStaticFallback();
+        });
+
+    function loadStaticFallback() {
+        const script = document.createElement('script');
+        script.src = 'assets/js/gallery-data.js?v=' + new Date().getTime();
+        script.onload = () => {
+            if (window.galleryData) {
+                initGallery(window.galleryData);
+            } else {
+                console.warn('Gallery Data loaded but window.galleryData is undefined.');
+            }
+        };
+        script.onerror = () => {
+            console.error('Failed to load gallery-data.js');
+        };
+        document.body.appendChild(script);
+    }
 
     function initGallery(data) {
         const { logos, conference, hospital } = data;
