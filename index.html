@@ -3,10 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KHC — Redefining Neonatal Respiratory Care</title>
+
+  <title>KHC — Redefining Neonatal Respiratory Care | CDSCO Approved</title>
   <meta name="description"
-    content="Kyron Healthcare designs integrated neonatal and pediatric respiratory systems engineered for real hospital conditions. Non-invasive ventilation, CPAP, and heated humidification solutions for NICUs and critical care.">
+    content="Kyron Healthcare designs indigenous neonatal respiratory systems (CPAP, NIV) approved by CDSCO. Engineered for clinical reality with 99.9% up-time. Made in India.">
+  <link rel="canonical" href="https://www.kyronhealthcare.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kyronhealthcare.com/">
+  <meta property="og:title" content="KHC — Redefining Neonatal Respiratory Care">
+  <meta property="og:description"
+    content="Indigenous neonatal respiratory innovations (CPAP, NIV) for Indian NICUs. CDSCO approved, ISO 13485 certified.">
+  <meta property="og:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.kyronhealthcare.com/">
+  <meta property="twitter:title" content="KHC — Redefining Neonatal Respiratory Care">
+  <meta property="twitter:description"
+    content="Indigenous neonatal respiratory innovations (CPAP, NIV) for Indian NICUs. CDSCO approved, ISO 13485 certified.">
+  <meta property="twitter:image" content="https://www.kyronhealthcare.com/assets/img/hero.jpg">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,14 +42,43 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
-    /* Hero Gradient Overlay */
+    /* Hero Gradient Overlay - Accessibility Imporved */
     .hero-bg {
-      background-image: linear-gradient(to right, rgba(11, 60, 104, 0.95), rgba(11, 60, 104, 0.7)), url('assets/img/hero.jpg');
+      /* Dark overlay for contrast + Image */
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('assets/img/hero.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
+
+    /* Text Shadow for overlay text */
+    .text-shadow-sm {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
   </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Kyron Healthcare",
+    "url": "https://www.kyronhealthcare.com",
+    "logo": "https://www.kyronhealthcare.com/assets/img/logo.jpg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9315942627",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": "en"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/kyronhealthcare/",
+      "https://www.facebook.com/kyron.healthcare.2025/",
+      "https://www.instagram.com/kyron_healthcare/"
+    ]
+  }
+  </script>
 </head>
 
 <body class="antialiased bg-white text-gray-800">
@@ -148,27 +196,35 @@
 
     <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div class="max-w-xl">
-        <span
-          class="inline-block py-1 px-3 rounded-full bg-blue-50 text-[#008ED6] text-xs font-bold tracking-widest uppercase mb-6 border border-blue-100">
-          Advanced Neonatal Care
-        </span>
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B3C68] mb-6 leading-tight tracking-tight">
-          Respiratory Care.<br>
-          <span class="text-[#008ED6] whitespace-nowrap">Engineered for Reality.</span>
-        </h1>
-        <p class="text-lg text-gray-600 mb-8 max-w-md">
-          Integrated neonatal and pediatric respiratory systems designed for the most delicate breaths in real hospital
-          environments.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="contact.html" class="btn btn-primary text-base px-8 py-3.5">
-            Request Demo
-          </a>
-          <a href="#products-section" class="btn btn-secondary text-base px-8 py-3.5">
-            View Products
-          </a>
+        <!-- Contrast Fix: Text Box -->
+        <div class="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/50">
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-blue-50 text-[#006B8F] text-xs font-bold tracking-widest uppercase mb-4 border border-blue-100">
+            Advanced Neonatal Care
+          </span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00324F] mb-6 leading-tight tracking-tight">
+            Respiratory Care.<br>
+            <span class="text-[#006B8F] whitespace-nowrap">Engineered for Reality.</span>
+          </h1>
+          <p class="text-lg text-[#1A1A1A] mb-8 leading-relaxed">
+            Integrated neonatal and pediatric respiratory systems designed for the most delicate breaths in real
+            hospital
+            environments.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="contact.html"
+              class="btn btn-primary bg-[#FF6B35] hover:bg-[#E55A2B] text-white px-8 py-3.5 shadow-lg hover:shadow-xl transition-all border-0 focus:ring-4 focus:ring-orange-200 focus:outline-none">
+              Request Demo
+            </a>
+            <a href="#products-section"
+              class="btn btn-secondary text-[#00324F] border-[#00324F] hover:bg-[#00324F] hover:text-white px-8 py-3.5 transition-all focus:ring-4 focus:ring-blue-100 focus:outline-none">
+              View Products
+            </a>
+          </div>
         </div>
       </div>
+
+    </div>
     </div>
   </section>
 
