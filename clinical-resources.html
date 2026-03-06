@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Resources & Evidence | Kyron Healthcare</title>
+    <meta name="description"
+        content="Evidence-based neonatal respiratory care. Access clinical studies, whitepapers, and technical guides for Kyron Healthcare products.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-white text-gray-800">
+
+    <!-- HEADER (Copied from index.html) -->
+    <header class="glass-nav sticky top-0 z-[200] transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/img/logo.jpg" alt="Kyron Healthcare" class="h-10 mix-blend-multiply">
+                <div class="flex flex-col leading-none">
+                    <span
+                        class="text-xl font-bold text-[#0B3C68] tracking-tight group-hover:text-[#008ED6] transition-colors">KYRON</span>
+                    <span class="text-xs font-medium text-gray-500 uppercase tracking-widest">Healthcare</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="hover:text-[#0B3C68] font-medium">Home</a>
+                <a href="products.html" class="hover:text-[#0B3C68] font-medium">Products</a>
+                <a href="clinical-resources.html" class="text-[#0B3C68] font-bold border-b-2 border-[#0B3C68]">Clinical</a>
+                <a href="about.html" class="hover:text-[#0B3C68] font-medium">About Us</a>
+                <a href="contact.html" class="hover:text-[#0B3C68] font-medium">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-[#F3F6F9] py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <span class="text-[#FF6B35] uppercase tracking-widest text-xs font-bold mb-4 block">Scientific Foundation</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-[#0B3C68] mb-6">Clinical Authority & <br>Technical Evidence</h1>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Bridging the gap between engineering innovation and clinical bedside results. Explore our library of technical performance data and clinical evidence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED RESOURCES -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Whitepapers -->
+                <div>
+                    <h2 class="text-2xl font-bold text-[#0B3C68] mb-8 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        Technical Whitepapers
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="resource-card p-6 bg-white border border-gray-100 rounded-2xl transition-all">
+                            <h3 class="font-bold text-[#0B3C68] mb-2">Advanced Humidification Dynamics</h3>
+                            <p class="text-sm text-gray-500 mb-4">A study on servo-control algorithms in the KHC 3000 for maintaining optimal airway therapy.</p>
+                            <a href="#" class="text-[#008ED6] text-xs font-bold uppercase tracking-widest hover:underline">Download PDF</a>
+                        </div>
+                        <div class="resource-card p-6 bg-white border border-gray-100 rounded-2xl transition-all">
+                            <h3 class="font-bold text-[#0B3C68] mb-2">Indigenous Resilience in NICU</h3>
+                            <p class="text-sm text-gray-500 mb-4">How the RespiAssist system handles power and oxygen infrastructure variability without therapeutic loss.</p>
+                            <a href="#" class="text-[#008ED6] text-xs font-bold uppercase tracking-widest hover:underline">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical Bibliography -->
+                <div>
+                    <h2 class="text-2xl font-bold text-[#0B3C68] mb-8 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                        Clinical Bibliography
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-[#FAFBFC] rounded-2xl border border-gray-100 italic text-sm text-gray-600">
+                            "The use of high-flow nasal cannula therapy in the neonate has shown a significant reduction in intubation rates when combined with precision humidification..."
+                            <div class="mt-4 not-italic font-bold text-[#0B3C68]">Journal of Neonatal Pediatrics, 2024</div>
+                        </div>
+                        <div class="p-6 bg-[#FAFBFC] rounded-2xl border border-gray-100 italic text-sm text-gray-600">
+                            "Servo-controlled heated humidifiers are essential in the management of VLBW infants to prevent airway drying and improve secretion clearance..."
+                            <div class="mt-4 not-italic font-bold text-[#0B3C68]">Clinical Respiratory Review, 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HCP EDUCATION -->
+    <section class="py-20 bg-[#0B3C68] text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Clinician Education Portal</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-12">
+                We provide comprehensive training materials to ensure the highest standards of care.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <h3 class="font-bold mb-4">Video Guides</h3>
+                    <p class="text-sm text-blue-100 mb-6">Step-by-step setup and troubleshooting for all RespiAssist models.</p>
+                    <button class="btn border border-white/50 text-white hover:bg-white hover:text-[#0B3C68] px-6 py-2 rounded-lg">Browse Library</button>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <h3 class="font-bold mb-4">Clinical Protocols</h3>
+                    <p class="text-sm text-blue-100 mb-6">Evidence-based weaning and escalation protocols for CPAP and HFNC.</p>
+                    <button class="btn border border-white/50 text-white hover:bg-white hover:text-[#0B3C68] px-6 py-2 rounded-lg">View Documents</button>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <h3 class="font-bold mb-4">Product Manuals</h3>
+                    <p class="text-sm text-blue-100 mb-6">Latest revision Instruction for Use (IFU) and technical manuals.</p>
+                    <button class="btn border border-white/50 text-white hover:bg-white hover:text-[#0B3C68] px-6 py-2 rounded-lg">Download Index</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ... -->
+</body>
+
+</html>
